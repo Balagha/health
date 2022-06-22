@@ -1,5 +1,6 @@
 import {DataSource} from "typeorm"
 import "reflect-metadata"
+
 import {UserInfo} from "./entity/user-info";
 import {Doctors} from "./entity/doctors";
 import {DoctorSpecialization} from "./entity/doctor-specialization";
@@ -14,11 +15,19 @@ export const AppDataSource = new DataSource({
     host: "localhost",
     port: 5432,
     username: "postgres",
-    password: "a",
+    password: "postgres",
     database: "postgres",
     synchronize: true,
     logging: true,
-    entities: [UserInfo,Doctors,DoctorSpecialization,Patients,Pescriptions,PatientMedicalCondition,MedicalTestReport],
+    entities: [
+        UserInfo,
+        Doctors,
+        DoctorSpecialization,
+        Patients,
+        Pescriptions,
+        PatientMedicalCondition,
+        MedicalTestReport
+    ],
     subscribers: [],
     migrations: [],
 })

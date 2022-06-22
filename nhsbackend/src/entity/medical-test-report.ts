@@ -1,6 +1,7 @@
-import {Column, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
 import {Patients} from "./patients";
 
+@Entity()
 export class MedicalTestReport {
     @PrimaryGeneratedColumn()
     id: number;
