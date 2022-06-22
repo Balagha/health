@@ -1,0 +1,310 @@
+databaseChangeLog:
+- changeSet:
+    id: 1655704233269-1
+    author: applee (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: PK_770f8e79222b0b3f46fad126b32
+            name: id
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: title
+            type: VARCHAR
+        tableName: doctor_specialization
+- changeSet:
+    id: 1655704233269-2
+    author: applee (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: PK_8207e7889b50ee3695c2b8154ff
+            name: id
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: govtID
+            type: VARCHAR
+        - column:
+            name: doctorSpecializeId
+            type: INTEGER
+        - column:
+            name: userInfoId
+            type: INTEGER
+        tableName: doctors
+- changeSet:
+    id: 1655704233269-3
+    author: applee (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: PK_273a06d6cdc2085ee1ce7638b24
+            name: id
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: name
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: bloodGroup
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: gender
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: dob
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: address
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: contact
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: ermegencyContactName
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: emegencyContactNumber
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: officialIdType
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: officialIdTypeNumber
+            type: VARCHAR
+        tableName: user_info
+- changeSet:
+    id: 1655704233269-4
+    author: applee (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: PK_a7f0b9fcbb3469d5ec0b0aceaa7
+            name: id
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: profession
+            type: VARCHAR
+        - column:
+            name: userInfoId
+            type: INTEGER
+        tableName: patients
+- changeSet:
+    id: 1655704233269-5
+    author: applee (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: PK_59794cc7d6ef647c10c1ed54cfa
+            name: id
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: problemStatement
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: medicalTests
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: advise
+            type: VARCHAR
+        - column:
+            constraints:
+              nullable: false
+            name: medicine
+            type: VARCHAR
+        - column:
+            name: patientsId
+            type: INTEGER
+        tableName: pescriptions
+- changeSet:
+    id: 1655704233269-6
+    author: applee (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: doctorSpecializeId
+        baseTableName: doctors
+        constraintName: FK_ac4779e041f34e9ce9d1e172810
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: doctor_specialization
+        validate: true
+- changeSet:
+    id: 1655704233269-7
+    author: applee (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: userInfoId
+        baseTableName: doctors
+        constraintName: FK_9b08c0bba502182b70666e5a280
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: user_info
+        validate: true
+- changeSet:
+    id: 1655704233269-8
+    author: applee (generated)
+    changes:
+    - addUniqueConstraint:
+        columnNames: doctorSpecializeId
+        constraintName: REL_ac4779e041f34e9ce9d1e17281
+        tableName: doctors
+- changeSet:
+    id: 1655704233269-9
+    author: applee (generated)
+    changes:
+    - addUniqueConstraint:
+        columnNames: userInfoId
+        constraintName: UQ_9b08c0bba502182b70666e5a280
+        tableName: doctors
+- changeSet:
+    id: 1655704233269-10
+    author: applee (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: userInfoId
+        baseTableName: patients
+        constraintName: FK_395e7d1a8916de9f7895a7fa29d
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: user_info
+        validate: true
+- changeSet:
+    id: 1655704233269-11
+    author: applee (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: patientsId
+        baseTableName: pescriptions
+        constraintName: FK_ba0dbf7616e843b3a050191904b
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: patients
+        validate: true
+- changeSet:
+    id: 1655704233269-12
+    author: applee (generated)
+    changes:
+    - addUniqueConstraint:
+        columnNames: userInfoId
+        constraintName: REL_395e7d1a8916de9f7895a7fa29
+        tableName: patients
+- changeSet:
+    id: 1655704233269-13
+    author: applee (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: transactiondate
+            type: date
+        - column:
+            name: postdate
+            type: date
+        - column:
+            name: description
+            type: TEXT
+        - column:
+            name: category
+            type: TEXT
+        - column:
+            name: type
+            type: TEXT
+        - column:
+            name: amount
+            type: FLOAT8
+        tableName: expenses
+- changeSet:
+    id: 1655704233269-14
+    author: applee (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: type
+            type: VARCHAR
+        - column:
+            name: database
+            type: VARCHAR
+        - column:
+            name: schema
+            type: VARCHAR
+        - column:
+            name: table
+            type: VARCHAR
+        - column:
+            name: name
+            type: VARCHAR
+        - column:
+            name: value
+            type: TEXT
+        tableName: typeorm_metadata
+
