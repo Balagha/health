@@ -26,10 +26,10 @@ export class UserInfo {
     contact: string
 
     @Column()
-    ermegencyContactName: string
+    emergencyContactName: string
 
     @Column()
-    emegencyContactNumber: string
+    emergencyContactNumber: string
 
     @Column()
     officialIdType: string
@@ -38,10 +38,10 @@ export class UserInfo {
     officialIdTypeNumber: string
 
     @OneToOne(() => Doctors, (doctors) => doctors.id)
-    doctors: Doctors
+    doctor: Doctors
 
     @OneToOne(() => Patients, (patients) => patients.id)
-    patients: Patients
+    patient: Patients
 
 
 

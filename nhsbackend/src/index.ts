@@ -3,7 +3,7 @@ import { UserInfo } from "./entity/user-info"
 import { Doctors } from "./entity/doctors"
 import { DoctorSpecialization } from "./entity/doctor-specialization"
 import { Patients } from "./entity/patients"
-import {Pescriptions} from "./entity/prescriptions";
+import {Prescriptions} from "./entity/prescriptions";
 import {MedicalTestReport} from "./entity/medical-test-report";
 const express = require("express")
 const app =express()
@@ -16,8 +16,8 @@ AppDataSource.initialize().then(async () => {
     user.dob = "apatoto copy paste"
     user.address = "jani nah"
     user.contact = "apatoto copy paste"
-    user.emegencyContactNumber ="apatoto copy paste"
-    user.ermegencyContactName  = "apatoto copy paste"
+    user.emergencyContactNumber ="apatoto copy paste"
+    user.emergencyContactName  = "apatoto copy paste"
     user.officialIdType ="apatoto copy paste"
     user.officialIdTypeNumber = "apatoto copy paste"
     await AppDataSource.manager.save(user)
@@ -40,7 +40,7 @@ AppDataSource.initialize().then(async () => {
 
     const Patient =new Patients()
     Patient.profession="Student"
-    Patient.user_info= user
+    Patient.userInfo= user
     await AppDataSource.manager.save(Patient)
 
 
@@ -56,16 +56,16 @@ AppDataSource.initialize().then(async () => {
 
 
 
-    const Prescription1 =new Pescriptions()
+    const Prescription1 =new Prescriptions()
     Prescription1.advise = "bla bla"
     Prescription1.medicalTests = "Bla Ba"
     Prescription1.problemStatement = "Pla pLa"
     Prescription1.medicine = "BBBB"
-    Prescription1.patients = Patient
+    Prescription1.patient = Patient
     await AppDataSource.manager.save(Prescription1)
 
-    const Prescription2 =new Pescriptions()
-    Prescription2.patients = Patient
+    const Prescription2 =new Prescriptions()
+    Prescription2.patient = Patient
     Prescription2.advise = "bla bla"
     Prescription2.medicalTests = "Bla Ba"
     Prescription2.problemStatement = "Pla pLa"

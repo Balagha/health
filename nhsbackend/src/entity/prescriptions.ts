@@ -2,7 +2,7 @@ import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, ManyToOne,
 import { Patients} from "./patients"
 
 @Entity()
-export class Pescriptions {
+export class Prescriptions {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -19,6 +19,6 @@ export class Pescriptions {
     medicine: string
 
     @ManyToOne(() => Patients, patients => patients.id)
-    patients: Patients;
+    patient: Patients;
 
 }
