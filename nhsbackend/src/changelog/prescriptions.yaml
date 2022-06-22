@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1655900259829-3
+      author: applee (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK_097b2cc2f2b7e56825468188503
+                  name: id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: problemStatement
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: medicalTests
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: advise
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: medicine
+                  type: VARCHAR
+              - column:
+                  name: patientId
+                  type: INTEGER
+            tableName: prescriptions
