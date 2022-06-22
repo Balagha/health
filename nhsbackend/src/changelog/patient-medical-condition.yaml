@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1655900259829-6
+      author: applee (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK_3f34a75a3938af802def47bd857
+                  name: id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: patientId
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: lastCheckupTime
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: bloodPressure
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: weight
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: height
+                  type: VARCHAR
+            tableName: Patient Medical Condition

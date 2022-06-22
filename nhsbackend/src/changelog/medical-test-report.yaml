@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1655900259829-7
+      author: applee (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK_01f5d48b2db6e56f59687825136
+                  name: id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: testName
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: testType
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: timeOfTesting
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: reportDelivaryTime
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: comments
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: testResult
+                  type: VARCHAR
+              - column:
+                  name: patientId
+                  type: INTEGER
+            tableName: Medical Test Report
