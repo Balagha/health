@@ -6,7 +6,7 @@ export class Prescriptions {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({type: "text"})
     problemStatement: string
 
     @Column()

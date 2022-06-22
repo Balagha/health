@@ -9,16 +9,16 @@ export class PatientMedicalCondition {
     @Column()
     patientId: string
 
-    @Column()
+    @Column({type: "date"})
     lastCheckupTime: string
 
     @Column()
     bloodPressure: string
 
-    @Column()
+    @Column({type: "float"})
     weight: string;
 
-    @Column()
+    @Column({type: "float"})
     height: string;
 
     @OneToOne(() => Patients, (patient) => patient.id)
