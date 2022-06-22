@@ -12,13 +12,13 @@ export class MedicalTestReport {
     @Column()
     testType: string
 
-    @Column()
+    @Column({type:"date"})
     timeOfTesting: string
 
-    @Column()
+    @Column({type:"date"})
     reportDelivaryTime: string;
 
-    @Column()
+    @Column({type: "text"})
     comments: string;
 
     @Column()

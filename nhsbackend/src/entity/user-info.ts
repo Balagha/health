@@ -16,7 +16,7 @@ export class UserInfo {
     @Column()
     gender: string
 
-    @Column()
+    @Column({type:"date"})
     dob: string
 
     @Column()
