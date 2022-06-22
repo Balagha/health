@@ -1,7 +1,7 @@
 import {Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
 import {Patients} from "./patients";
 
-@Entity()
+@Entity("Medical Test Report")
 export class MedicalTestReport {
     @PrimaryGeneratedColumn()
     id: number;

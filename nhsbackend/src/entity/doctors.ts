@@ -16,5 +16,5 @@ export class Doctors {
 
     @OneToOne(() => UserInfo, (user_info) => user_info.id) //user
     @JoinColumn()
-    user_info: UserInfo
+    userInfo: UserInfo
 }

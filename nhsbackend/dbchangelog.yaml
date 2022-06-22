@@ -1,6 +1,26 @@
 databaseChangeLog:
 - changeSet:
-    id: 1655895843661-1
+    id: 1655900259829-1
+    author: applee (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: PK_0679e7b8d1e282977d0cd99d65f
+            name: id
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: title
+            type: VARCHAR
+        tableName: Doctor Specialization
+- changeSet:
+    id: 1655900259829-2
     author: applee (generated)
     changes:
     - createTable:
@@ -26,7 +46,7 @@ databaseChangeLog:
             type: INTEGER
         tableName: doctors
 - changeSet:
-    id: 1655895843661-2
+    id: 1655900259829-3
     author: applee (generated)
     changes:
     - createTable:
@@ -36,30 +56,7 @@ databaseChangeLog:
             constraints:
               nullable: false
               primaryKey: true
-              primaryKeyName: PK_a7f0b9fcbb3469d5ec0b0aceaa7
-            name: id
-            type: INTEGER
-        - column:
-            constraints:
-              nullable: false
-            name: profession
-            type: VARCHAR
-        - column:
-            name: userInfoId
-            type: INTEGER
-        tableName: patients
-- changeSet:
-    id: 1655895843661-3
-    author: applee (generated)
-    changes:
-    - createTable:
-        columns:
-        - column:
-            autoIncrement: true
-            constraints:
-              nullable: false
-              primaryKey: true
-              primaryKeyName: PK_59794cc7d6ef647c10c1ed54cfa
+              primaryKeyName: PK_097b2cc2f2b7e56825468188503
             name: id
             type: INTEGER
         - column:
@@ -83,11 +80,11 @@ databaseChangeLog:
             name: medicine
             type: VARCHAR
         - column:
-            name: patientsId
+            name: patientId
             type: INTEGER
-        tableName: pescriptions
+        tableName: prescriptions
 - changeSet:
-    id: 1655895843661-4
+    id: 1655900259829-4
     author: applee (generated)
     changes:
     - createTable:
@@ -97,17 +94,20 @@ databaseChangeLog:
             constraints:
               nullable: false
               primaryKey: true
-              primaryKeyName: PK_0679e7b8d1e282977d0cd99d65f
+              primaryKeyName: PK_a7f0b9fcbb3469d5ec0b0aceaa7
             name: id
             type: INTEGER
         - column:
             constraints:
               nullable: false
-            name: title
+            name: profession
             type: VARCHAR
-        tableName: Doctor Specialization
+        - column:
+            name: userInfoId
+            type: INTEGER
+        tableName: patients
 - changeSet:
-    id: 1655895843661-5
+    id: 1655900259829-5
     author: applee (generated)
     changes:
     - createTable:
@@ -153,12 +153,12 @@ databaseChangeLog:
         - column:
             constraints:
               nullable: false
-            name: ermegencyContactName
+            name: emergencyContactName
             type: VARCHAR
         - column:
             constraints:
               nullable: false
-            name: emegencyContactNumber
+            name: emergencyContactNumber
             type: VARCHAR
         - column:
             constraints:
@@ -172,7 +172,7 @@ databaseChangeLog:
             type: VARCHAR
         tableName: User Info
 - changeSet:
-    id: 1655895843661-6
+    id: 1655900259829-6
     author: applee (generated)
     changes:
     - createTable:
@@ -212,7 +212,7 @@ databaseChangeLog:
             type: VARCHAR
         tableName: Patient Medical Condition
 - changeSet:
-    id: 1655895843661-7
+    id: 1655900259829-7
     author: applee (generated)
     changes:
     - createTable:
@@ -222,7 +222,7 @@ databaseChangeLog:
             constraints:
               nullable: false
               primaryKey: true
-              primaryKeyName: PK_5752578d779995b3fe707ee3713
+              primaryKeyName: PK_01f5d48b2db6e56f59687825136
             name: id
             type: INTEGER
         - column:
@@ -258,24 +258,9 @@ databaseChangeLog:
         - column:
             name: patientId
             type: INTEGER
-        tableName: medical_test_report
+        tableName: Medical Test Report
 - changeSet:
-    id: 1655895843661-8
-    author: applee (generated)
-    changes:
-    - addForeignKeyConstraint:
-        baseColumnNames: userInfoId
-        baseTableName: doctors
-        constraintName: FK_9b08c0bba502182b70666e5a280
-        deferrable: false
-        initiallyDeferred: false
-        onDelete: NO ACTION
-        onUpdate: NO ACTION
-        referencedColumnNames: id
-        referencedTableName: User Info
-        validate: true
-- changeSet:
-    id: 1655895843661-9
+    id: 1655900259829-8
     author: applee (generated)
     changes:
     - addForeignKeyConstraint:
@@ -290,7 +275,30 @@ databaseChangeLog:
         referencedTableName: Doctor Specialization
         validate: true
 - changeSet:
-    id: 1655895843661-10
+    id: 1655900259829-9
+    author: applee (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: userInfoId
+        baseTableName: doctors
+        constraintName: FK_9b08c0bba502182b70666e5a280
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: User Info
+        validate: true
+- changeSet:
+    id: 1655900259829-10
+    author: applee (generated)
+    changes:
+    - addUniqueConstraint:
+        columnNames: userInfoId
+        constraintName: REL_9b08c0bba502182b70666e5a28
+        tableName: doctors
+- changeSet:
+    id: 1655900259829-11
     author: applee (generated)
     changes:
     - addUniqueConstraint:
@@ -298,15 +306,37 @@ databaseChangeLog:
         constraintName: REL_ac4779e041f34e9ce9d1e17281
         tableName: doctors
 - changeSet:
-    id: 1655895843661-11
+    id: 1655900259829-12
     author: applee (generated)
     changes:
-    - addUniqueConstraint:
-        columnNames: userInfoId
-        constraintName: UQ_9b08c0bba502182b70666e5a280
-        tableName: doctors
+    - addForeignKeyConstraint:
+        baseColumnNames: patientId
+        baseTableName: prescriptions
+        constraintName: FK_51f48335657278b20348dde416c
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: patients
+        validate: true
 - changeSet:
-    id: 1655895843661-12
+    id: 1655900259829-13
+    author: applee (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: patientId
+        baseTableName: Medical Test Report
+        constraintName: FK_078e093719943188adfd9e6920e
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: patients
+        validate: true
+- changeSet:
+    id: 1655900259829-14
     author: applee (generated)
     changes:
     - addForeignKeyConstraint:
@@ -321,37 +351,7 @@ databaseChangeLog:
         referencedTableName: User Info
         validate: true
 - changeSet:
-    id: 1655895843661-13
-    author: applee (generated)
-    changes:
-    - addForeignKeyConstraint:
-        baseColumnNames: patientId
-        baseTableName: medical_test_report
-        constraintName: FK_9bbb02c38ac4cb48b29b3563e29
-        deferrable: false
-        initiallyDeferred: false
-        onDelete: NO ACTION
-        onUpdate: NO ACTION
-        referencedColumnNames: id
-        referencedTableName: patients
-        validate: true
-- changeSet:
-    id: 1655895843661-14
-    author: applee (generated)
-    changes:
-    - addForeignKeyConstraint:
-        baseColumnNames: patientsId
-        baseTableName: pescriptions
-        constraintName: FK_ba0dbf7616e843b3a050191904b
-        deferrable: false
-        initiallyDeferred: false
-        onDelete: NO ACTION
-        onUpdate: NO ACTION
-        referencedColumnNames: id
-        referencedTableName: patients
-        validate: true
-- changeSet:
-    id: 1655895843661-15
+    id: 1655900259829-15
     author: applee (generated)
     changes:
     - addForeignKeyConstraint:
@@ -366,7 +366,7 @@ databaseChangeLog:
         referencedTableName: patients
         validate: true
 - changeSet:
-    id: 1655895843661-16
+    id: 1655900259829-16
     author: applee (generated)
     changes:
     - addUniqueConstraint:
@@ -374,7 +374,7 @@ databaseChangeLog:
         constraintName: REL_395e7d1a8916de9f7895a7fa29
         tableName: patients
 - changeSet:
-    id: 1655895843661-17
+    id: 1655900259829-17
     author: applee (generated)
     changes:
     - addUniqueConstraint:
@@ -382,32 +382,7 @@ databaseChangeLog:
         constraintName: REL_d7bb433381fe0b77f70a3b40e9
         tableName: Patient Medical Condition
 - changeSet:
-    id: 1655895843661-18
-    author: applee (generated)
-    changes:
-    - createTable:
-        columns:
-        - column:
-            name: transactiondate
-            type: date
-        - column:
-            name: postdate
-            type: date
-        - column:
-            name: description
-            type: TEXT
-        - column:
-            name: category
-            type: TEXT
-        - column:
-            name: type
-            type: TEXT
-        - column:
-            name: amount
-            type: FLOAT8
-        tableName: expenses
-- changeSet:
-    id: 1655895843661-19
+    id: 1655900259829-18
     author: applee (generated)
     changes:
     - createTable:
