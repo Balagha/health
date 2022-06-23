@@ -1,8 +1,8 @@
 import {Router} from "express";
-import {UserInfo} from "../entity/user-info";
+import {UserInfo} from "../../entity/user-info";
 const router = Router();
 
-router.post('/user', async (req, res) => {
+router.post('/api/user', async (req, res) => {
     const {
         name,
         bloodGroup,

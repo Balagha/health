@@ -1,9 +1,9 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToOne, OneToMany} from "typeorm"
+import {Entity, Column, PrimaryGeneratedColumn, OneToOne, OneToMany, BaseEntity} from "typeorm"
 import {Doctors} from "./doctors"
 import {Patients} from "./patients"
 
 @Entity('User Info')
-export class UserInfo {
+export class UserInfo extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -42,7 +42,5 @@ export class UserInfo {
 
     @OneToOne(() => Patients, (patients) => patients.id)
     patient: Patients
-
-
 
 }
