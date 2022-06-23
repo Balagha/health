@@ -4,18 +4,18 @@ import {Router} from "express";
 const router = Router();
 
 router.post('/', (req, res) => UserInfo
-    .save(req.body).then(res.json));
+    .save(req.body).then(r => res.json(r)));
 
 router.get('/', (_, res) => UserInfo
-    .find().then(res.json))
+    .find().then(r => res.json(r)));
 
 router.get('/:id', (req, res) => UserInfo
-    .findOneBy({id: parseInt(req.params.id)}).then(res.json));
+    .findOneBy({id: parseInt(req.params.id)}).then(r => res.json(r)));
 
 router.put('/:id', (req, res) => UserInfo
-    .save({...req.body, id: parseInt(req.params.id)}).then(res.json));
+    .save({...req.body, id: parseInt(req.params.id)}).then(r => res.json(r)));
 
 router.delete('/:id', (req, res) => UserInfo
-    .delete({id: parseInt(req.params.id)}).then(res.json));
+    .delete({id: parseInt(req.params.id)}).then(r => res.json(r)));
 
 export default router;
