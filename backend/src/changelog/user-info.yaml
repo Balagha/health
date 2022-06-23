@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1655900259829-5
-      author: applee (generated)
+      id: 1656012315600-5
+      author: asifjoardar (generated)
       changes:
         - createTable:
             columns:
@@ -32,7 +32,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                   name: dob
-                  type: VARCHAR
+                  type: date
               - column:
                   constraints:
                     nullable: false
@@ -41,7 +41,10 @@ databaseChangeLog:
               - column:
                   constraints:
                     nullable: false
-                  name: contact
+                  name: contactNumber
+                  type: VARCHAR
+              - column:
+                  name: email
                   type: VARCHAR
               - column:
                   constraints:
@@ -56,11 +59,12 @@ databaseChangeLog:
               - column:
                   constraints:
                     nullable: false
-                  name: officialIdType
-                  type: VARCHAR
+                  name: officialId
+                  type: TEXT
               - column:
-                  constraints:
-                    nullable: false
-                  name: officialIdTypeNumber
-                  type: VARCHAR
+                  name: doctorId
+                  type: INTEGER
+              - column:
+                  name: patientId
+                  type: INTEGER
             tableName: User Info

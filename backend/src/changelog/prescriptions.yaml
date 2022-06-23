@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1655900259829-3
-      author: applee (generated)
+      id: 1656012315600-3
+      author: asifjoardar (generated)
       changes:
         - createTable:
             columns:
@@ -17,7 +17,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                   name: problemStatement
-                  type: VARCHAR
+                  type: TEXT
               - column:
                   constraints:
                     nullable: false
@@ -35,5 +35,8 @@ databaseChangeLog:
                   type: VARCHAR
               - column:
                   name: patientId
+                  type: INTEGER
+              - column:
+                  name: doctorId
                   type: INTEGER
             tableName: prescriptions

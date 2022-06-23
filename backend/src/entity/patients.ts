@@ -1,9 +1,9 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, OneToMany} from "typeorm"
+import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, OneToMany, BaseEntity} from "typeorm"
 import {UserInfo} from "./user-info"
 import {Prescriptions} from "./prescriptions"
 
 @Entity()
-export class Patients {
+export class Patients extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -15,5 +15,6 @@ export class Patients {
     userInfo: UserInfo;
 
     @OneToMany(() => Prescriptions, prescriptions => prescriptions.id,{ onDelete: "CASCADE"})
+    @JoinColumn()
     prescriptions: Prescriptions[];
 }
