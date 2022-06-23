@@ -1,8 +1,9 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, ManyToOne,} from "typeorm"
+import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, ManyToOne, BaseEntity,} from "typeorm"
 import { Patients} from "./patients"
+import {Doctors} from "./doctors";
 
 @Entity()
-export class Prescriptions {
+export class Prescriptions extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -19,6 +20,10 @@ export class Prescriptions {
     medicine: string
 
     @ManyToOne(() => Patients, patients => patients.id)
+    @JoinColumn()
     patient: Patients;
 
+    @OneToOne(() => Doctors, doctors => doctors.id)
+    @JoinColumn()
+    doctor: Doctors
 }

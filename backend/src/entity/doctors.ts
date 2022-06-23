@@ -1,20 +1,20 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn} from "typeorm"
+import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, BaseEntity} from "typeorm"
 import {DoctorSpecialization} from "./doctor-specialization"
 import {UserInfo} from "./user-info"
 
 @Entity()
-export class Doctors {
+export class Doctors extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number
 
     @Column()
-    govtID: string
+    govtRegNo: string
 
-    @OneToOne(() => DoctorSpecialization, (doctorSpecialize) => doctorSpecialize.id)
+    @OneToOne(() => DoctorSpecialization, (doctorSpecialize) => doctorSpecialize.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    doctorSpecialize: DoctorSpecialization
+    specialization: DoctorSpecialization
 
-    @OneToOne(() => UserInfo, (user_info) => user_info.id) //user
+    @OneToOne(() => UserInfo, (user_info) => user_info.id)
     @JoinColumn()
     userInfo: UserInfo
 }

@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1655900259829-2
-      author: applee (generated)
+      id: 1656012315600-2
+      author: asifjoardar (generated)
       changes:
         - createTable:
             columns:
@@ -16,10 +16,10 @@ databaseChangeLog:
               - column:
                   constraints:
                     nullable: false
-                  name: govtID
+                  name: govtRegNo
                   type: VARCHAR
               - column:
-                  name: doctorSpecializeId
+                  name: specializationId
                   type: INTEGER
               - column:
                   name: userInfoId

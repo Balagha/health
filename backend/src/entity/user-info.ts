@@ -1,4 +1,4 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToOne, OneToMany, BaseEntity} from "typeorm"
+import {Entity, Column, PrimaryGeneratedColumn, OneToOne, BaseEntity, JoinColumn} from "typeorm"
 import {Doctors} from "./doctors"
 import {Patients} from "./patients"
 
@@ -16,31 +16,45 @@ export class UserInfo extends BaseEntity{
     @Column()
     gender: string
 
-    @Column({type:"date"})
+    @Column({
+        type:"date"
+    })
     dob: string
 
     @Column()
     address: string
 
-    @Column()
-    contact: string
+    @Column({
+        unique: true,
+    })
+    contactNumber: string
+
+    @Column({
+        unique: true,
+        nullable: true
+    })
+    email: string
 
     @Column()
     emergencyContactName: string
 
-    @Column()
+    @Column({
+        unique: true,
+    })
     emergencyContactNumber: string
 
-    @Column()
-    officialIdType: string
-
-    @Column()
-    officialIdTypeNumber: string
+    @Column("simple-json")
+    officialId:{
+        type: string,
+        number: string
+    }
 
     @OneToOne(() => Doctors, (doctors) => doctors.id)
+    @JoinColumn()
     doctor: Doctors
 
     @OneToOne(() => Patients, (patients) => patients.id)
+    @JoinColumn()
     patient: Patients
 
 }
