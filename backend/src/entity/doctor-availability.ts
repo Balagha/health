@@ -16,7 +16,7 @@ export class DoctorAvailability extends BaseEntity{
     weekend: string[]
 
 
-    @OneToOne(() => Doctors, doctors => doctors.id)
+    @OneToOne(() => Doctors, doctors => doctors.id, { onDelete: "CASCADE"})
     @JoinColumn()
     doctor: Doctors
 }

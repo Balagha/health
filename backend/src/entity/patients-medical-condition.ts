@@ -1,5 +1,5 @@
 import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, BaseEntity,} from "typeorm"
-import {Patients} from "./patients"
+import {Patient} from "./patient"
 
 @Entity('Patient Medical Condition')
 export class PatientMedicalCondition extends BaseEntity{
@@ -18,7 +18,7 @@ export class PatientMedicalCondition extends BaseEntity{
     @Column({type: "float"})
     height: string;
 
-    @OneToOne(() => Patients, (patient) => patient.id)
+    @OneToOne(() => Patient, (patient) => patient.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    patient: Patients
+    patient: Patient
 }

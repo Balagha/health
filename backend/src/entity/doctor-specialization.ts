@@ -9,7 +9,7 @@ export class DoctorSpecialization extends BaseEntity{
     @Column()
     title: string
 
-    @OneToOne(() => Doctors, (doctor) => doctor.id)
+    @OneToOne(() => Doctors, (doctor) => doctor.id, { onDelete: "CASCADE"})
     @JoinColumn()
     doctor: Doctors
 }
