@@ -1,6 +1,6 @@
 import {Entity, Column, PrimaryGeneratedColumn, OneToOne, BaseEntity, JoinColumn} from "typeorm"
 import {Doctors} from "./doctors"
-import {Patients} from "./patients"
+import {Patient} from "./patient"
 
 @Entity('User Info')
 export class UserInfo extends BaseEntity{
@@ -48,13 +48,5 @@ export class UserInfo extends BaseEntity{
         type: string,
         number: string
     }
-
-    @OneToOne(() => Doctors, (doctors) => doctors.id)
-    @JoinColumn()
-    doctor: Doctors
-
-    @OneToOne(() => Patients, (patients) => patients.id)
-    @JoinColumn()
-    patient: Patients
 
 }

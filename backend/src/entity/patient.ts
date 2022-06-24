@@ -3,18 +3,15 @@ import {UserInfo} from "./user-info"
 import {Prescriptions} from "./prescriptions"
 
 @Entity()
-export class Patients extends BaseEntity{
+export class Patient extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
     profession: string
 
-    @OneToOne(() => UserInfo, (user_info) => user_info.id)
+    @OneToOne(() => UserInfo, (user_info) => user_info.id, { onDelete: "CASCADE"})
     @JoinColumn()
     userInfo: UserInfo;
 
-    @OneToMany(() => Prescriptions, prescriptions => prescriptions.id,{ onDelete: "CASCADE"})
-    @JoinColumn()
-    prescriptions: Prescriptions[];
 }

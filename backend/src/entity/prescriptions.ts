@@ -1,5 +1,5 @@
 import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, ManyToOne, BaseEntity,} from "typeorm"
-import { Patients} from "./patients"
+import { Patient} from "./patient"
 import {Doctors} from "./doctors";
 
 @Entity()
@@ -19,9 +19,9 @@ export class Prescriptions extends BaseEntity{
     @Column()
     medicine: string
 
-    @ManyToOne(() => Patients, patients => patients.id)
+    @ManyToOne(() => Patient, patients => patients.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    patient: Patients;
+    patient: Patient;
 
     @OneToOne(() => Doctors, doctors => doctors.id)
     @JoinColumn()
