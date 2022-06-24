@@ -10,11 +10,11 @@ export class Doctors extends BaseEntity{
     @Column()
     govtRegNo: string
 
-    @OneToOne(() => DoctorSpecialization, (doctorSpecialize) => doctorSpecialize.id, { onDelete: "CASCADE"})
+    @OneToOne(() => DoctorSpecialization, (doctorSpecialize) => doctorSpecialize.id)
     @JoinColumn()
     specialization: DoctorSpecialization
 
-    @OneToOne(() => UserInfo, (user_info) => user_info.id)
+    @OneToOne(() => UserInfo, (user_info) => user_info.id, { onDelete: "CASCADE"})
     @JoinColumn()
     userInfo: UserInfo
 }
