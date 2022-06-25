@@ -1,6 +1,7 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, OneToMany, BaseEntity} from "typeorm"
-import {UserInfo} from "./user-info"
-import {Prescriptions} from "./prescriptions"
+import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, OneToMany, BaseEntity} from "typeorm";
+import {User} from "./user";
+import {PatientMedicalCondition} from "./patient-medical-condition";
+import {MedicalTestReport} from "./medical-test-report";
 
 @Entity()
 export class Patient extends BaseEntity{
@@ -10,8 +11,15 @@ export class Patient extends BaseEntity{
     @Column()
     profession: string
 
-    @OneToOne(() => UserInfo, (user_info) => user_info.id, { onDelete: "CASCADE"})
+    @OneToOne(() => User, (user_info) => user_info.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    userInfo: UserInfo;
+    user: User;
 
+    @OneToOne(() => MedicalTestReport, medicalTestReport => medicalTestReport.id)
+    @JoinColumn()
+    medical_test_report: MedicalTestReport
+
+    @OneToOne(() => PatientMedicalCondition, patientMedicalCondition => patientMedicalCondition.id)
+    @JoinColumn()
+    patient_medical_condition: PatientMedicalCondition
 }
