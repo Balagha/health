@@ -5,4 +5,4 @@ build/
 tmp/
 temp/
 liquibase.properties
-src/data-source.ts
+.env
