@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1656012315600-2
+      author: asifjoardar (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK_8207e7889b50ee3695c2b8154ff
+                  name: id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: govtRegNo
+                  type: VARCHAR
+              - column:
+                  name: specializationId
+                  type: INTEGER
+              - column:
+                  name: userInfoId
+                  type: INTEGER
+            tableName: doctors

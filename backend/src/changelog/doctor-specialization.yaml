@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1655900259829-1
-      author: applee (generated)
+      id: 1656012315600-1
+      author: asifjoardar (generated)
       changes:
         - createTable:
             columns:
@@ -18,4 +18,7 @@ databaseChangeLog:
                     nullable: false
                   name: title
                   type: VARCHAR
+              - column:
+                  name: doctorId
+                  type: INTEGER
             tableName: Doctor Specialization

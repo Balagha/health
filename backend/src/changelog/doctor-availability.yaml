@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1655900259829-4
-      author: applee (generated)
+      id: 1656012315600-8
+      author: asifjoardar (generated)
       changes:
         - createTable:
             columns:
@@ -10,15 +10,20 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: PK_a7f0b9fcbb3469d5ec0b0aceaa7
+                    primaryKeyName: PK_c087ec33bbaa953da3e867f83b8
                   name: id
                   type: INTEGER
               - column:
                   constraints:
                     nullable: false
-                  name: profession
-                  type: VARCHAR
+                  name: time
+                  type: TEXT
               - column:
-                  name: userInfoId
+                  constraints:
+                    nullable: false
+                  name: weekend
+                  type: TEXT
+              - column:
+                  name: doctorId
                   type: INTEGER
-            tableName: patients
+            tableName: Doctor Availability

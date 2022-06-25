@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1655900259829-6
-      author: applee (generated)
+      id: 1656012315600-6
+      author: asifjoardar (generated)
       changes:
         - createTable:
             columns:
@@ -16,13 +16,8 @@ databaseChangeLog:
               - column:
                   constraints:
                     nullable: false
-                  name: patientId
-                  type: INTEGER
-              - column:
-                  constraints:
-                    nullable: false
                   name: lastCheckupTime
-                  type: VARCHAR
+                  type: date
               - column:
                   constraints:
                     nullable: false
@@ -32,10 +27,13 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                   name: weight
-                  type: VARCHAR
+                  type: FLOAT8
               - column:
                   constraints:
                     nullable: false
                   name: height
-                  type: VARCHAR
+                  type: FLOAT8
+              - column:
+                  name: patientId
+                  type: INTEGER
             tableName: Patient Medical Condition

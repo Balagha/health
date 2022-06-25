@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1655900259829-7
-      author: applee (generated)
+      id: 1656012315600-5
+      author: asifjoardar (generated)
       changes:
         - createTable:
             columns:
@@ -10,40 +10,61 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: PK_01f5d48b2db6e56f59687825136
+                    primaryKeyName: PK_5dfabc7f48606ca147fb5626afe
                   name: id
                   type: INTEGER
               - column:
                   constraints:
                     nullable: false
-                  name: testName
+                  name: name
                   type: VARCHAR
               - column:
                   constraints:
                     nullable: false
-                  name: testType
+                  name: bloodGroup
                   type: VARCHAR
               - column:
                   constraints:
                     nullable: false
-                  name: timeOfTesting
+                  name: gender
                   type: VARCHAR
               - column:
                   constraints:
                     nullable: false
-                  name: reportDelivaryTime
+                  name: dob
+                  type: date
+              - column:
+                  constraints:
+                    nullable: false
+                  name: address
                   type: VARCHAR
               - column:
                   constraints:
                     nullable: false
-                  name: comments
+                  name: contactNumber
+                  type: VARCHAR
+              - column:
+                  name: email
                   type: VARCHAR
               - column:
                   constraints:
                     nullable: false
-                  name: testResult
+                  name: emergencyContactName
                   type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: emergencyContactNumber
+                  type: VARCHAR
+              - column:
+                  constraints:
+                    nullable: false
+                  name: officialId
+                  type: TEXT
+              - column:
+                  name: doctorId
+                  type: INTEGER
               - column:
                   name: patientId
                   type: INTEGER
-            tableName: Medical Test Report
+            tableName: User Info

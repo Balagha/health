@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1655900259829-2
-      author: applee (generated)
+      id: 1656012315600-7
+      author: asifjoardar (generated)
       changes:
         - createTable:
             columns:
@@ -10,18 +10,20 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: PK_8207e7889b50ee3695c2b8154ff
+                    primaryKeyName: PK_01f5d48b2db6e56f59687825136
                   name: id
                   type: INTEGER
               - column:
                   constraints:
                     nullable: false
-                  name: govtID
-                  type: VARCHAR
+                  name: test
+                  type: TEXT
               - column:
-                  name: doctorSpecializeId
-                  type: INTEGER
+                  constraints:
+                    nullable: false
+                  name: comments
+                  type: TEXT
               - column:
-                  name: userInfoId
+                  name: patientId
                   type: INTEGER
-            tableName: doctors
+            tableName: Medical Test Report
