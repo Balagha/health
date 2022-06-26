@@ -1,16 +1,16 @@
 import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, BaseEntity,} from "typeorm"
 import {Patient} from "./patient"
 
-@Entity('Patient Medical Condition')
+@Entity('patient_medical_condition')
 export class PatientMedicalCondition extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column({type: "date"})
-    lastCheckupTime: string
+    last_checkup_time: string
 
     @Column()
-    bloodPressure: string
+    blood_pressure: string
 
     @Column({type: "float"})
     weight: string;
@@ -20,5 +20,5 @@ export class PatientMedicalCondition extends BaseEntity{
 
     @OneToOne(() => Patient, (patient) => patient.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    patient: Patient
+    patient_id: Patient
 }

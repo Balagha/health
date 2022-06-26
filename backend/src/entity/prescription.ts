@@ -1,17 +1,17 @@
 import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, ManyToOne, BaseEntity,} from "typeorm"
 import { Patient} from "./patient"
-import {Doctors} from "./doctors";
+import {Doctor} from "./doctor";
 
 @Entity()
-export class Prescriptions extends BaseEntity{
+export class Prescription extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column({type: "text"})
-    problemStatement: string
+    problem_statement: string
 
     @Column()
-    medicalTests: string
+    medical_tests: string
 
     @Column()
     advise: string
@@ -21,9 +21,9 @@ export class Prescriptions extends BaseEntity{
 
     @ManyToOne(() => Patient, patients => patients.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    patient: Patient;
+    patient_id: Patient;
 
-    @OneToOne(() => Doctors, doctors => doctors.id)
+    @OneToOne(() => Doctor, doctors => doctors.id)
     @JoinColumn()
-    doctor: Doctors
+    doctor_id: Doctor
 }

@@ -1,6 +1,5 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, OneToMany, BaseEntity} from "typeorm"
-import {UserInfo} from "./user-info"
-import {Prescriptions} from "./prescriptions"
+import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, OneToMany, BaseEntity} from "typeorm";
+import {User} from "./user";
 
 @Entity()
 export class Patient extends BaseEntity{
@@ -10,8 +9,8 @@ export class Patient extends BaseEntity{
     @Column()
     profession: string
 
-    @OneToOne(() => UserInfo, (user_info) => user_info.id, { onDelete: "CASCADE"})
+    @OneToOne(() => User, (user_info) => user_info.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    userInfo: UserInfo;
+    user_id: User;
 
 }

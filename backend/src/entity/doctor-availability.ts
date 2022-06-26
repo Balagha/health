@@ -1,22 +1,22 @@
 import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, ManyToOne, BaseEntity,} from "typeorm"
-import {Doctors} from "./doctors";
+import {Doctor} from "./doctor";
 
-@Entity("Doctor Availability")
+@Entity("doctor_availability")
 export class DoctorAvailability extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column("simple-json")
     time:{
-        availableFrom: string,
-        availableTo: string
+        available_from: string,
+        available_to: string
     }
 
     @Column("simple-array")
     weekend: string[]
 
 
-    @OneToOne(() => Doctors, doctors => doctors.id, { onDelete: "CASCADE"})
+    @OneToOne(() => Doctor, doctors => doctors.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    doctor: Doctors
+    doctor_id: Doctor
 }

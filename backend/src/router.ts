@@ -1,23 +1,49 @@
 import {Router} from "express";
 
-import pmc from "./controllers/pmc"
-import mtr from "./controllers/mtr"
-import user from "./controllers/user";
-import doctor from "./controllers/doctor";
-import patient from "./controllers/patient"
-import da from "./controllers/d-availability"
-import ds from "./controllers/d-specialization"
-import prescription from "./controllers/prescription";
+import user from "./controllers/crud/user";
+import doctor from "./controllers/crud/doctor";
+import patient from "./controllers/crud/patient"
+import prescription from "./controllers/crud/prescription";
 
 const router = Router();
 
-router.use('/da', da);
-router.use('/ds', ds);
-router.use('/pmc', pmc);
-router.use('/mtr', mtr);
-router.use('/user', user);
-router.use('/doctor', doctor);
-router.use('/patient', patient);
-router.use('/prescription', prescription);
+const defaultRoutes = [
+    {
+        path: '/doctor',
+        route: doctor.doctorAvailability,
+    },
+    {
+        path: '/doctor-specialization',
+        route: doctor.doctorSpecialization,
+    },
+    {
+        path: '/patient-medical-condition',
+        route: patient.patientMedicalCondition,
+    },
+    {
+        path: '/medical-test-report',
+        route: patient.medicalTestReport,
+    },
+    {
+        path: '/user',
+        route: user,
+    },
+    {
+        path: '/doctor',
+        route: doctor.doctor,
+    },
+    {
+        path: '/patient',
+        route: patient.patient,
+    },
+    {
+        path: '/prescription',
+        route: prescription,
+    }
+];
+
+defaultRoutes.forEach((route) => {
+    router.use(route.path, route.route);
+});
 
 export default router;

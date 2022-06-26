@@ -1,9 +1,7 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToOne, BaseEntity, JoinColumn} from "typeorm"
-import {Doctors} from "./doctors"
-import {Patient} from "./patient"
+import {Entity, Column, PrimaryGeneratedColumn, OneToOne, BaseEntity, JoinColumn} from "typeorm";
 
-@Entity('User Info')
-export class UserInfo extends BaseEntity{
+@Entity('user')
+export class User extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -11,7 +9,7 @@ export class UserInfo extends BaseEntity{
     name: string
 
     @Column()
-    bloodGroup: string
+    blood_group: string
 
     @Column()
     gender: string
@@ -27,7 +25,7 @@ export class UserInfo extends BaseEntity{
     @Column({
         unique: true,
     })
-    contactNumber: string
+    contact_number: string
 
     @Column({
         unique: true,
@@ -36,15 +34,15 @@ export class UserInfo extends BaseEntity{
     email: string
 
     @Column()
-    emergencyContactName: string
+    emergency_contact_name: string
 
     @Column({
         unique: true,
     })
-    emergencyContactNumber: string
+    emergency_contact_number: string
 
     @Column("simple-json")
-    officialId:{
+    official_id:{
         type: string,
         number: string
     }

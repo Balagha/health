@@ -1,7 +1,7 @@
 import {Entity, Column, PrimaryGeneratedColumn, OneToOne, BaseEntity, JoinColumn} from "typeorm"
-import { Doctors } from "./doctors"
+import { Doctor } from "./doctor"
 
-@Entity('Doctor Specialization')
+@Entity('doctor_specialization')
 export class DoctorSpecialization extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
@@ -9,7 +9,7 @@ export class DoctorSpecialization extends BaseEntity{
     @Column()
     title: string
 
-    @OneToOne(() => Doctors, (doctor) => doctor.id, { onDelete: "CASCADE"})
+    @OneToOne(() => Doctor, (doctor) => doctor.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    doctor: Doctors
+    doctor_id: Doctor
 }

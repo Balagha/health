@@ -1,7 +1,7 @@
 import {BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
 import {Patient} from "./patient";
 
-@Entity("Medical Test Report")
+@Entity("medical_test_report")
 export class MedicalTestReport extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
@@ -11,7 +11,7 @@ export class MedicalTestReport extends BaseEntity{
         name: string,
         type: string,
         time: string,
-        reportDeliveryTime: string,
+        report_delivery_time: string,
         result: string
     }
 
@@ -20,6 +20,6 @@ export class MedicalTestReport extends BaseEntity{
 
     @ManyToOne(() => Patient, (patient) => patient.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    patient: Patient
+    patient_id: Patient
 
 }
