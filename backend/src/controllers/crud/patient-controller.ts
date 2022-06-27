@@ -3,24 +3,24 @@ import {MedicalTestReport} from "../../entity/medical-test-report";
 import {PatientMedicalCondition} from "../../entity/patient-medical-condition";
 import {Router} from "express";
 
-const patient = Router();
+const patientController = Router();
 const medicalTestReport = Router();
 const patientMedicalCondition = Router();
 
-/* patient crud start */
-patient.post('/:id', (req, res) => Patient
+/* patientController crud start */
+patientController.post('/:id', (req, res) => Patient
     .save({...req.body, user_id: parseInt(req.params.id)}).then(r => res.json(r)));
 
-patient.get('/', (_, res) => Patient
+patientController.get('/', (_, res) => Patient
     .find().then(r => res.json(r)));
 
-patient.get('/:id', (req, res) => Patient
+patientController.get('/:id', (req, res) => Patient
     .findOneBy({id: parseInt(req.params.id)}).then(r => res.json(r)));
 
-patient.put('/:id', (req, res) => Patient
+patientController.put('/:id', (req, res) => Patient
     .save({...req.body, id: parseInt(req.params.id)}).then(r => res.json(r)));
 
-patient.delete('/:id', (req, res) => Patient
+patientController.delete('/:id', (req, res) => Patient
     .delete({id: parseInt(req.params.id)}).then(r => res.json(r)));
 
 medicalTestReport.post('/:id', (req, res) => MedicalTestReport
@@ -55,7 +55,7 @@ patientMedicalCondition.delete('/:id', (req, res) => PatientMedicalCondition
     .delete({id: parseInt(req.params.id)}).then(r => res.json(r)));
 
 export default {
-    patient,
+    patient: patientController,
     medicalTestReport,
     patientMedicalCondition,
 };

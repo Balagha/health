@@ -6,7 +6,10 @@ export class User extends BaseEntity{
     id: number;
 
     @Column()
-    name: string
+    first_name: string
+
+    @Column()
+    last_name: string
 
     @Column()
     blood_group: string
@@ -17,7 +20,7 @@ export class User extends BaseEntity{
     @Column({
         type:"date"
     })
-    dob: string
+    date_of_birth: string
 
     @Column()
     address: string
@@ -32,9 +35,6 @@ export class User extends BaseEntity{
         nullable: true
     })
     email: string
-
-    @Column()
-    emergency_contact_name: string
 
     @Column({
         unique: true,

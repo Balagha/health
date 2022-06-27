@@ -1,49 +1,21 @@
+/*
 import {Router} from "express";
 
-import user from "./controllers/crud/user";
-import doctor from "./controllers/crud/doctor";
-import patient from "./controllers/crud/patient"
-import prescription from "./controllers/crud/prescription";
+import user from "./controllers/crud/user-controller";
+import doctor from "./controllers/crud/doctor-controller";
+import patient from "./controllers/crud/patient-controller"
+import prescription from "./controllers/crud/prescription-controller";
 
 const router = Router();
 
-const defaultRoutes = [
-    {
-        path: '/doctor',
-        route: doctor.doctorAvailability,
-    },
-    {
-        path: '/doctor-specialization',
-        route: doctor.doctorSpecialization,
-    },
-    {
-        path: '/patient-medical-condition',
-        route: patient.patientMedicalCondition,
-    },
-    {
-        path: '/medical-test-report',
-        route: patient.medicalTestReport,
-    },
-    {
-        path: '/user',
-        route: user,
-    },
-    {
-        path: '/doctor',
-        route: doctor.doctor,
-    },
-    {
-        path: '/patient',
-        route: patient.patient,
-    },
-    {
-        path: '/prescription',
-        route: prescription,
-    }
-];
+router.use('/user', user);
 
-defaultRoutes.forEach((route) => {
-    router.use(route.path, route.route);
-});
+router.use('/doctor', doctor.doctor);
+router.use('/patient', patient.patient);
+router.use('/prescription', prescription);
+router.use('/doctor', doctor.doctorAvailability);
+router.use('/medical-test-report', patient.medicalTestReport);
+router.use('/doctor-specialization', doctor.doctorSpecialization);
+router.use('/patient-medical-condition', patient.patientMedicalCondition);
 
-export default router;
+export default router;*/

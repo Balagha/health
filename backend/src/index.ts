@@ -1,7 +1,7 @@
 import {AppDataSource} from "./data-source"
 import * as express from "express"
 import * as BodyParser from "body-parser"
-import router from "./router";
+import router from "./routes/routers";
 
 const app =express();
 
