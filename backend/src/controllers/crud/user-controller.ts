@@ -14,8 +14,15 @@ const createUser = (req, res) => {
 const getUsers = (_, res) => User
     .find().then(r => res.json(r));
 
-const getUserById = (req, res) => User
-    .findOneBy({id: parseInt(req.params.id)}).then(r => res.json(r));
+const getUserById = (req, res) => {
+    try {
+        validationResult(req).throw();
+        User.findOneBy({id: parseInt(req.params.id)}).then(r => res.json(r));
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
 const updateUser = (req, res) => {
     {
@@ -29,8 +36,15 @@ const updateUser = (req, res) => {
     };
 };
 
-const deleteUser = (req, res) => User
-    .delete({id: parseInt(req.params.id)}).then(r => res.json(r))
+const deleteUser = (req, res) => {
+    try {
+        validationResult(req).throw();
+        User.delete({id: parseInt(req.params.id)}).then(r => res.json(r))
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
 export default {
     createUser,
