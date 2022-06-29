@@ -21,9 +21,9 @@ export class Prescription extends BaseEntity{
 
     @ManyToOne(() => Patient, patients => patients.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    patient_id: Patient;
+    patient: Patient;
 
     @OneToOne(() => Doctor, doctors => doctors.id)
     @JoinColumn()
-    doctor_id: Doctor
+    doctor: Doctor
 }

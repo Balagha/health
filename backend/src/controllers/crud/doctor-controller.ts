@@ -1,65 +1,95 @@
 import {Doctor} from "../../entity/doctor";
 import {DoctorSpecialization} from "../../entity/doctor-specialization"
 import {DoctorAvailability} from "../../entity/doctor-availability"
+import {validationResult} from "express-validator";
+import {User} from "../../entity/user";
 
-import {Router} from "express";
+const createDoctor = (req, res) => {
+    try {
+        validationResult(req).throw();
+        User.save(req.body.user).then(() => {
+            User.findOneBy({contact_number: req.body.user.contact_number}).then(user => {
+                Doctor.save({...req.body.doctor, user: user.id}).then(doctor => {
+                    Promise.all([
+                        DoctorSpecialization.save({...req.body.doctorSpecialization, doctor: doctor.id}),
+                        DoctorAvailability.save({...req.body.doctorAvailability, doctor: doctor.id})
+                    ]).then(r => {
+                        Doctor
+                            .createQueryBuilder()
+                            .update()
+                            .set({doctor_availability: r[0].id, doctor_specialization: r[1].id})
+                            .where({id: r[0].doctor})
+                            .execute()
+                            .then(() => res.json(req.body));
+                    });
+                });
+            });
+        });
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
-const doctorController = Router();
-const doctorSpecialization = Router();
-const doctorAvailability = Router();
+const getDoctors = (req, res) => {
+    try {
+        validationResult(req).throw();
+        Doctor
+            .find({ relations: ["user_id", "doctor_availability_id", "doctor_specialization_id"] }).then(r => res.json(r))
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
-/* doctorController start */
-doctorController.post('/:id', (req, res) => Doctor
-    .save({...req.body, user_id: parseInt(req.params.id)}).then(r => res.json(r)));
+const getDoctorById = (req, res) => {
+    try {
+        validationResult(req).throw();
+        Doctor
+            .findOne({
+                relations: ["user_id", "doctor_availability_id", "doctor_specialization_id"],
+                where:{
+                    id: parseInt(req.params.id)
+                }
+            }).then(r => res.json(r))
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
-doctorController.get('/', (_, res) => Doctor
-    .find().then(r => res.json(r)));
+const updateDoctor = (req, res) => {
+    try{
+        validationResult(req).throw();
+        Doctor
+            .createQueryBuilder()
+            .update()
+            .set(req.body)
+            .where({id: req.params.id})
+            .execute()
+            .then(() => res.json(req.body));
+    }
+    catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
-doctorController.get('/:id', (req, res) => Doctor
-    .findOneBy({id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-doctorController.put('/:id', (req, res) => Doctor
-    .save({...req.body, id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-doctorController.delete('/:id', (req, res) => Doctor
-    .delete({id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-/* doctorController specialization start */
-
-doctorSpecialization.post('/:id', (req, res) => DoctorSpecialization
-    .save({...req.body, doctor_id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-doctorSpecialization.get('/', (_, res) => DoctorSpecialization
-    .find().then(r => res.json(r)));
-
-doctorSpecialization.get('/:id', (req, res) => DoctorSpecialization
-    .findOneBy({id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-doctorSpecialization.put('/:id', (req, res) => DoctorSpecialization
-    .save({...req.body, id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-doctorSpecialization.delete('/:id', (req, res) => DoctorSpecialization
-    .delete({id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-/* doctorController availability start */
-
-doctorAvailability.post('/:id/doctor-availability', (req, res) => DoctorAvailability
-    .save({...req.body, doctor_id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-doctorAvailability.get('/available-doctors', (_, res) => DoctorAvailability
-    .find().then(r => res.json(r)));
-
-doctorAvailability.get('/:id', (req, res) => DoctorAvailability
-    .findOneBy({id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-doctorAvailability.put('/:id', (req, res) => DoctorAvailability
-    .save({...req.body, id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-doctorAvailability.delete('/:id', (req, res) => DoctorAvailability
-    .delete({id: parseInt(req.params.id)}).then(r => res.json(r)));
+const deleteDoctor = (req, res) => {
+    try {
+        validationResult(req).throw();
+        Doctor
+            .delete({id: parseInt(req.params.id)}).then(r => res.json(r));
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
 export default {
-    doctor: doctorController,
-    doctorSpecialization,
-    doctorAvailability
+    createDoctor,
+    getDoctors,
+    getDoctorById,
+    deleteDoctor,
+    updateDoctor
 };

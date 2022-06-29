@@ -18,5 +18,5 @@ export class DoctorAvailability extends BaseEntity{
 
     @OneToOne(() => Doctor, doctors => doctors.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    doctor_id: Doctor
+    doctor: Doctor
 }

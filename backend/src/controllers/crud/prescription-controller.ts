@@ -1,21 +1,64 @@
 import {Prescription} from "../../entity/prescription"
-import {Router} from "express";
+import {validationResult} from "express-validator";
 
-const router = Router();
+const createPrescription = (req, res) => {
+    try {
+        validationResult(req).throw();
+        Prescription
+            .save({...req.body, patient_id: parseInt(req.params.patientId), doctor: parseInt(req.params.doctorId)})
+            .then(r => res.json(r));
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
-router.post('/:patientId/:doctorId', (req, res) => Prescription
-    .save({...req.body, patient_id: parseInt(req.params.patientId), doctor: parseInt(req.params.doctorId)}).then(r => res.json(r)));
+const getPrescriptions = (req, res) => {
+    try {
+        validationResult(req).throw();
+        Prescription.find().then(r => res.json(r));
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+}
 
-router.get('/', (_, res) => Prescription
-    .find().then(r => res.json(r)));
+const getPrescriptionById = (req, res) => {
+    try {
+        validationResult(req).throw();
+        Prescription.findOneBy({id: parseInt(req.params.id)}).then(r => res.json(r));
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
-router.get('/:id', (req, res) => Prescription
-    .findOneBy({id: parseInt(req.params.id)}).then(r => res.json(r)));
+const updatePrescription = (req, res) => {
+    try {
+        validationResult(req).throw();
+        Prescription
+            .save({...req.body, id: parseInt(req.params.id)}).then(r => res.json(r));
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
-router.put('/:id', (req, res) => Prescription
-    .save({...req.body, id: parseInt(req.params.id)}).then(r => res.json(r)));
+const deletePrescription = (req, res) => {
+    try {
+        validationResult(req).throw();
+        Prescription
+            .delete({id: parseInt(req.params.id)}).then(r => res.json(r));
+    } catch (err) {
+        console.log(err.mapped());
+        res.status(400).json(err.mapped());
+    }
+};
 
-router.delete('/:id', (req, res) => Prescription
-    .delete({id: parseInt(req.params.id)}).then(r => res.json(r)));
-
-export default router;
+export default {
+    createPrescription,
+    getPrescriptions,
+    getPrescriptionById,
+    updatePrescription,
+    deletePrescription
+};

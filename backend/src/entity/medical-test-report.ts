@@ -20,6 +20,6 @@ export class MedicalTestReport extends BaseEntity{
 
     @ManyToOne(() => Patient, (patient) => patient.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    patient_id: Patient
+    patient: Patient
 
 }

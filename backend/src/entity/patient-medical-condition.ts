@@ -6,19 +6,19 @@ export class PatientMedicalCondition extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({type: "date"})
+    @Column()
     last_checkup_time: string
 
     @Column()
     blood_pressure: string
 
-    @Column({type: "float"})
+    @Column()
     weight: string;
 
-    @Column({type: "float"})
+    @Column()
     height: string;
 
     @OneToOne(() => Patient, (patient) => patient.id, { onDelete: "CASCADE"})
     @JoinColumn()
-    patient_id: Patient
+    patient: Patient
 }
