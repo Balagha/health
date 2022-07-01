@@ -2,36 +2,29 @@ import {Doctor} from "../../entity/doctor";
 import {DoctorSpecialization} from "../../entity/doctor-specialization"
 import {DoctorAvailability} from "../../entity/doctor-availability"
 import {User} from "../../entity/user";
-import {addUser, addDoctor, addSpecialization, addAvailability} from "./utils";
+import {createUser, createDoctor, createSpecialization, createAvailability} from "./createUtils";
+import {updateUserEntity, updateDoctorAvailabilityEntity, updateDoctorForeignKeys} from "./updateUtils";
 
 const relations = ["user_id", "doctor_availability_id", "doctor_specialization_id"];
 
-const createDoctor = (req, res) => {
-    User.save(addUser(req))
-        .then(userObj => Doctor.save(addDoctor(req, userObj))
+const addDoctor = (req, res) =>
+    User.save(createUser(req))
+        .then(userObj => Doctor.save(createDoctor(req, userObj))
             .then(doctorObj => {
                 Promise.all([
-                    DoctorSpecialization.save(addSpecialization(req, doctorObj)),
-                    DoctorAvailability.save(addAvailability(req, doctorObj))
-                ]).then(obj => Doctor
-                    .createQueryBuilder()
-                    .update()
-                    .set({doctor_availability: obj[0], doctor_specialization: obj[1]})
-                    .where({id: obj[0].doctor})
-                    .execute()
-                    .then(res.json)
-                );
+                    DoctorSpecialization.save(createSpecialization(req, doctorObj)),
+                    DoctorAvailability.save(createAvailability(req, doctorObj))
+                ]).then(obj => updateDoctorForeignKeys(doctorObj, obj[0], obj[1]).then(res.json));
             })
         );
-};
 
 const updateDoctor = (req, res) => Doctor
-    .createQueryBuilder()
-    .update()
-    .set(req.body)
-    .where({id: req.params.id})
-    .execute()
-    .then(() => res.json(req.body));
+    .findOne({where:{id: req.params.id}})
+    .then(doctor => Promise.all([
+        updateUserEntity(req, doctor),
+        updateDoctorAvailabilityEntity(req, doctor)
+        ]).then(res.json)
+    );
 
 const getDoctors = (req, res) => Doctor.find({relations}).then(res.json);
 
@@ -42,7 +35,7 @@ const getDoctorById = (req, res) => Doctor
 const deleteDoctor = (req, res) => Doctor.delete({id: parseInt(req.params.id)}).then(res.json);
 
 export default {
-    createDoctor,
+    addDoctor,
     getDoctors,
     getDoctorById,
     deleteDoctor,

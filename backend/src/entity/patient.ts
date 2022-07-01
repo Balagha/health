@@ -21,5 +21,5 @@ export class Patient extends BaseEntity{
 
     @OneToOne(() => PatientMedicalCondition, patientMedicalCondition => patientMedicalCondition.id)
     @JoinColumn()
-    Patient_medical_condition: PatientMedicalCondition
+    patient_medical_condition: PatientMedicalCondition
 }

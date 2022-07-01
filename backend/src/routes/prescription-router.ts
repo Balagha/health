@@ -14,31 +14,25 @@ const validate = status => (req, res, next) => {
 const router = Router();
 
 router.post('/:patientId/:doctorId',
-    validation.idValidation(Patient, 'Patient'),
-    validate(404),
-    validation.idValidation(Doctor, 'Doctor'),
-    validate(404),
-    validation.createPrescriptionValidation,
-    validate(400),
+    validation.idValidation(Patient, 'Patient'), validate(404),
+    validation.idValidation(Doctor, 'Doctor'), validate(404),
+    validation.createPrescriptionValidation, validate(400),
     prescription.createPrescription);
 
 router.get('/', prescription.getPrescriptions);
 
 router.get('/:id',
-    validation.idValidation(Prescription, 'Prescription'),
-    validate(404),
+    validation.idValidation(Prescription, 'Prescription'), validate(404),
     prescription.getPrescriptionById);
 
-router.put('/:id',
-    validation.idValidation(Prescription, 'Prescription'),
-    validate(404),
-    validation.updatePrescriptionValidation,
-    validate(400),
+router.put('/:id/:doctorId',
+    validation.idValidation(Prescription, 'Prescription'), validate(404),
+    validation.idValidation(Doctor, 'Doctor'), validate(404),
+    validation.updatePrescriptionValidation, validate(400),
     prescription.updatePrescription);
 
 router.delete('/:id',
-    validation.idValidation(Prescription, 'Prescription'),
-    validate(404),
+    validation.idValidation(Prescription, 'Prescription'), validate(404),
     prescription.deletePrescription);
 
 export default router;

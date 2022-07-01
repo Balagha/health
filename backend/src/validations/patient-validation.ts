@@ -39,26 +39,27 @@ const commonProperty = [
     'weight',
     'height'
 ];
-
+const unCommonProperty = [
+    'first_name',
+    'last_name',
+    'blood_group',
+    'gender',
+    'date_of_birth',
+    'official_id_type',
+    'official_id_number',
+    'test_name',
+    'test_type',
+    'test_time',
+    'test_report_delivery_time',
+    'test_result',
+    'comments',
+];
 const commonChecks = check(commonProperty).notEmpty();
+const unCommonChecks = check(unCommonProperty).notEmpty();
 
 const createPatientValidation = [
     commonChecks,
-    check([
-        'first_name',
-        'last_name',
-        'blood_group',
-        'gender',
-        'date_of_birth',
-        'official_id_type',
-        'official_id_number',
-        'test_name',
-        'test_type',
-        'test_time',
-        'test_report_delivery_time',
-        'test_result',
-        'comments',
-    ]).notEmpty(),
+    unCommonChecks,
     check('email').normalizeEmail().isEmail().custom(checkUnique(User, 'email', 'Email Address')),
     check('contact_number').notEmpty().isLength({min: 11}).custom(checkUnique(User, 'contact_number', 'Contact Number')),
 ];
@@ -70,9 +71,8 @@ const idValidation = param('id').exists().toInt().custom(id => Patient
 const idValidationList = [idValidation];
 
 const updatePatientValidation = [
-    check(commonProperty).custom(reqBody => {
-        return (commonProperty, reqBody) => reqBody.every(val => commonProperty.includes(val));
-    })
+    check(unCommonProperty).isEmpty(),
+    commonChecks
 ];
 
 export default {

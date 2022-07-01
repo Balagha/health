@@ -6,7 +6,7 @@ import {Doctor} from "../../entity/doctor";
 import {DoctorSpecialization} from "../../entity/doctor-specialization";
 import {DoctorAvailability} from "../../entity/doctor-availability";
 
-const addUser = req => User.create({
+const createUser = req => User.create({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     blood_group: req.body.blood_group,
@@ -20,11 +20,11 @@ const addUser = req => User.create({
     official_id_number: req.body.official_id_number
 });
 
-const addPatient = (req,userObj) => Patient.create({
+const createPatient = (req,userObj) => Patient.create({
     profession: req.body.profession,
     user: userObj.id
 });
-const addMedicalTestReport = (req, patientObj) => MedicalTestReport.create({
+const createMedicalTestReport = (req, patientObj) => MedicalTestReport.create({
     test_name: req.body.test_name,
     test_type: req.body.test_type,
     test_time: req.body.test_time,
@@ -33,7 +33,7 @@ const addMedicalTestReport = (req, patientObj) => MedicalTestReport.create({
     comments: req.body.comments,
     patient: patientObj.id
 });
-const addPatientMedicalCondition = (req, patientObj) => PatientMedicalCondition.create({
+const createPatientMedicalCondition = (req, patientObj) => PatientMedicalCondition.create({
     last_checkup_time: req.body.last_checkup_time,
     blood_pressure: req.body.blood_pressure,
     weight: req.body.weight,
@@ -41,15 +41,15 @@ const addPatientMedicalCondition = (req, patientObj) => PatientMedicalCondition.
     patient: patientObj.id
 });
 
-const addDoctor = (req,userObj) => Doctor.create({
+const createDoctor = (req,userObj) => Doctor.create({
     govt_reg_no: req.body.govt_reg_no,
     user: userObj.id
 });
-const addSpecialization = (req, doctorObj) => DoctorSpecialization.create({
+const createSpecialization = (req, doctorObj) => DoctorSpecialization.create({
     specialization: req.body.specialization,
     doctor: doctorObj.id
 });
-const addAvailability = (req, doctorObj) => DoctorAvailability.create({
+const createAvailability = (req, doctorObj) => DoctorAvailability.create({
     available_from: req.body.available_from,
     available_to: req.body.available_from,
     weekend :req.body.weekend,
@@ -57,11 +57,11 @@ const addAvailability = (req, doctorObj) => DoctorAvailability.create({
 });
 
 export {
-    addUser,
-    addPatient,
-    addMedicalTestReport,
-    addPatientMedicalCondition,
-    addDoctor,
-    addSpecialization,
-    addAvailability
+    createUser,
+    createPatient,
+    createMedicalTestReport,
+    createPatientMedicalCondition,
+    createDoctor,
+    createSpecialization,
+    createAvailability
 };
