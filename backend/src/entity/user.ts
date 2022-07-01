@@ -31,8 +31,7 @@ export class User extends BaseEntity{
     contact_number: string
 
     @Column({
-        unique: true,
-        nullable: true
+        unique: true
     })
     email: string
 

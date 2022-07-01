@@ -10,7 +10,7 @@ const validate = status => (req, res, next) => {
     return errors.isEmpty() ? next() : res.status(status).json({errors: errors.array()});
 }
 
-router.post('/',validation.createPatientValidation , validate(400), patient.createPatient);
+router.post('/',validation.createPatientValidation , validate(400), patient.addPatient);
 router.get('/', patient.getPatients);
 router.get('/:id', validation.idValidationList, validate(404), patient.getPatientById);
 router.put('/:id',
