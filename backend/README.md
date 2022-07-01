@@ -7,7 +7,7 @@
 <a href="https://typeorm.io/" title="Typeorm"><img src="https://raw.githubusercontent.com/typeorm/typeorm/master/resources/logo_big.png" alt="typeorm" width="21px" height="21px"></a>
 
 # Prerequisites
-~ 1. Node.js version >= v14.19.3
+ 1. Node.js version >= v14.19.3
  2. PostgreSQL >=PostgreSQL 12.11
 
 # To Run the health project
