@@ -6,14 +6,16 @@ export class MedicalTestReport extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column("simple-json")
-    test:{
-        name: string,
-        type: string,
-        time: string,
-        report_delivery_time: string,
-        result: string
-    }
+    @Column()
+    test_name: string
+    @Column()
+    test_type: string
+    @Column()
+    test_time: string
+    @Column()
+    test_report_delivery_time: string
+    @Column()
+    test_result: string
 
     @Column({type: "text"})
     comments: string;

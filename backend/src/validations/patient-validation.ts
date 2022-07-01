@@ -2,85 +2,81 @@ import {check, param} from "express-validator";
 import {User} from "../entity/user";
 import {Patient} from "../entity/patient";
 
+const reqBody = {
+    first_name: "Asif",
+    last_name: "Joardar",
+    blood_group: "B+",
+    gender: "Male",
+    date_of_birth: "29-08-1994",
+    email: "abc@gmail.com",
+    contact_number: "12345678910",
+    emergency_contact_number: "12345678911",
+    address: "31 Kolabaagan 1st Lane",
+    official_id_type: "PASSPORT",
+    official_id_number: "EH01233456",
+    profession: "bekar",
+    test_name: "blood test",
+    test_type: "bla",
+    test_time: "01-06-2023",
+    test_report_delivery_time: "01-06-2024",
+    test_result: "valo",
+    last_checkup_time: "01-06-2029",
+    blood_pressure: "123",
+    weight: "100",
+    height: "123"
+}
+
+const checkUnique = (entity, field, prefix) => value => entity
+    .findOne({where: {[field]: value}})
+    .then(obj => obj && Promise.reject(`${prefix} already in use`));
+
+const commonProperty = [
+    'address',
+    'emergency_contact_number',
+    'profession',
+    'last_checkup_time',
+    'blood_pressure',
+    'weight',
+    'height'
+];
+
+const commonChecks = check(commonProperty).notEmpty();
+
 const createPatientValidation = [
+    commonChecks,
     check([
-        'user.first_name',
-        'user.last_name',
-        'user.blood_group',
-        'user.gender',
-        'user.date_of_birth',
-        'user.address',
-        'user.official_id.type',
-        'user.official_id.number',
-        'patient',
-        'medicalTestReport',
-        'patientMedicalCondition'
+        'first_name',
+        'last_name',
+        'blood_group',
+        'gender',
+        'date_of_birth',
+        'official_id_type',
+        'official_id_number',
+        'test_name',
+        'test_type',
+        'test_time',
+        'test_report_delivery_time',
+        'test_result',
+        'comments',
     ]).notEmpty(),
-    check('user.email').normalizeEmail().isEmail().custom(value => {
-        return User.findOne({ where: {email: value} })
-            .then(user => {
-                if (user) {
-                    return Promise.reject('E-mail already in use');
-                }
-            })
-    }),
-    check('user.contact_number').notEmpty().isLength({ min: 11 }).custom(value => {
-        return User.findOne({ where: {contact_number: value} })
-            .then(user => {
-                if (user) {
-                    return Promise.reject('contact number already in use');
-                }
-            })
-    }),
-    check('user.emergency_contact_number').notEmpty().isLength({ min: 11 }).custom(value => {
-        return User.findOne({ where: {emergency_contact_number: value} })
-            .then(user => {
-                if (user) {
-                    return Promise.reject('emergency contact number already in use');
-                }
-            })
-    })
+    check('email').normalizeEmail().isEmail().custom(checkUnique(User, 'email', 'Email Address')),
+    check('contact_number').notEmpty().isLength({min: 11}).custom(checkUnique(User, 'contact_number', 'Contact Number')),
 ];
 
-const getPatientsValidation = [];
+const idValidation = param('id').exists().toInt().custom(id => Patient
+    .findOne({where: {id}})
+    .then(id => id && Promise.reject('Doctor id is not found.')));
 
-const getPatientByIdValidation = [
-    param('id').exists().toInt().custom(patientId => {
-        return Patient.findOne({ where: {id: patientId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('patient id is not found.');
-                }
-            })
-    }),
-];
+const idValidationList = [idValidation];
 
 const updatePatientValidation = [
-    param('id').exists().toInt().custom(patientId => {
-        return Patient.findOne({ where: {id: patientId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('patient id is not found.');
-                }
-            })
-    }),
-];
-
-const deletePatientValidation = [
-    param('id').exists().toInt().custom(patientId => {
-        return Patient.findOne({ where: {id: patientId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('patient id is not found.');
-                }
-            })
-    }),
+    check(commonProperty).custom(reqBody => {
+        return (commonProperty, reqBody) => reqBody.every(val => commonProperty.includes(val));
+    })
 ];
 
 export default {
     createPatientValidation,
-    getPatientsValidation,
-    getPatientByIdValidation,
     updatePatientValidation,
-    deletePatientValidation
+    idValidationList
 };

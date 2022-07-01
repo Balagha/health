@@ -1,5 +1,4 @@
 import {check, param} from "express-validator";
-import {Prescription} from "../entity/prescription";
 
 const createPrescriptionValidation = [
     check([
@@ -10,53 +9,14 @@ const createPrescriptionValidation = [
     ]).notEmpty()
 ];
 
-const getPrescriptionsValidation = [];
+const idValidation = (entity, prefix) => param('id').exists().toInt().custom(id => entity
+    .findOne({where: {id}})
+    .then(id => id && Promise.reject(`${prefix} id is not found.`)));
 
-const getPrescriptionByIdValidation = [
-    param('patientId').exists().toInt().custom(patientId => {
-        return Prescription.findOne({ where: {patient: patientId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('patient id is not found.');
-                }
-            })
-    }),
-    param('doctorId').exists().toInt().custom(patientId => {
-        return Prescription.findOne({ where: {doctor: patientId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('patient id is not found.');
-                }
-            })
-    }),
-];
-
-const updatePrescriptionValidation = [
-    param('id').exists().toInt().custom(prescriptionId => {
-        return Prescription.findOne({ where: {id: prescriptionId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('patient id is not found.');
-                }
-            })
-    }),
-];
-
-const deletePrescriptionValidation = [
-    param('id').exists().toInt().custom(prescriptionId => {
-        return Prescription.findOne({ where: {id: prescriptionId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('patient id is not found.');
-                }
-            })
-    }),
-];
+const updatePrescriptionValidation = [];
 
 export default {
     createPrescriptionValidation,
-    getPrescriptionsValidation,
-    getPrescriptionByIdValidation,
     updatePrescriptionValidation,
-    deletePrescriptionValidation
+    idValidation
 };

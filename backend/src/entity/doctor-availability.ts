@@ -6,13 +6,13 @@ export class DoctorAvailability extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column("simple-json")
-    time:{
-        available_from: string,
-        available_to: string
-    }
+    @Column()
+    available_from: string
 
-    @Column("simple-array")
+    @Column()
+    available_to: string
+
+    @Column("varchar",{ array: true })
     weekend: string[]
 
 

@@ -2,93 +2,70 @@ import {check, param} from "express-validator";
 import {Doctor} from "../entity/doctor";
 import {User} from "../entity/user";
 
+const reqBody = {
+    first_name: "Asif",
+    last_name: "Joardar",
+    blood_group: "B+",
+    gender: "Male",
+    date_of_birth: "29-08-1994",
+    email: "abc@gmail.com",
+    contact_number: "12345678910",
+    emergency_contact_number: "12345678911",
+    address: "31 Kolabaagan 1st Lane",
+    official_id_type: "PASSPORT",
+    official_id_number: "EH01233456",
+    govt_reg_no: "246810",
+    specialization: "GYNEA",
+    available_from: "01-06-2022",
+    available_to: "01-06-2023",
+    weekend: ["FRIDAY", "SATURDAY"]
+}
+
+const checkUnique = (entity, field, prefix) => value => entity
+        .findOne({where: {[field]: value}})
+        .then(obj => obj && Promise.reject(`${prefix} already in use`));
+
+const commonProperty = [
+    'address',
+    'emergency_contact_number',
+    'available_from',
+    'available_to',
+    'weekend'
+];
+
+const commonChecks = check(commonProperty).notEmpty();
+
 const createDoctorValidation = [
+    commonChecks,
     check([
-        'user.first_name',
-        'user.last_name',
-        'user.blood_group',
-        'user.gender',
-        'user.date_of_birth',
-        'user.address',
-        'user.official_id.type',
-        'user.official_id.number',
-        'doctorSpecialization.title',
-        'doctorAvailability.time.available_from',
-        'doctorAvailability.time.available_to',
-        'doctorAvailability.weekend'
+        'first_name',
+        'last_name',
+        'blood_group',
+        'gender',
+        'date_of_birth',
+        'official_id_type',
+        'official_id_number',
+        'specialization'
     ]).notEmpty(),
-    check('user.email').normalizeEmail().isEmail().custom(value => {
-        return User.findOne({ where: {email: value} })
-            .then(user => {
-                if (user) {
-                    return Promise.reject('E-mail already in use');
-                }
-            })
-    }),
-    check('user.contact_number').notEmpty().isLength({ min: 11 }).custom(value => {
-        return User.findOne({ where: {contact_number: value} })
-            .then(user => {
-                if (user) {
-                    return Promise.reject('contact number already in use');
-                }
-            })
-    }),
-    check('user.emergency_contact_number').notEmpty().isLength({ min: 11 }).custom(value => {
-        return User.findOne({ where: {emergency_contact_number: value} })
-            .then(user => {
-                if (user) {
-                    return Promise.reject('emergency contact number already in use');
-                }
-            })
-    }),
-    check('doctor.govt_reg_no').notEmpty().custom(value => {
-        return Doctor.findOne({ where: {govt_reg_no: value} })
-            .then(docRegNo => {
-                if (docRegNo) {
-                    return Promise.reject('doctor govt. reg number already in use');
-                }
-            })
-    }),
+    check('email').normalizeEmail().isEmail().custom(checkUnique(User, 'email', 'Email Address')),
+    check('contact_number').notEmpty().isLength({min: 11}).custom(checkUnique(User, 'contact_number', 'Contact Number')),
+    check('govt_reg_no').notEmpty().custom(checkUnique(Doctor, 'govt_reg_no', 'Government Registration Number')),
 ];
 
-const getDoctorsValidation = [];
+const idValidation = param('id').exists().toInt().custom(id => Doctor
+    .findOne({where: {id}})
+    .then(id => id && Promise.reject('Doctor id is not found.')));
 
-const getDoctorByIdValidation = [
-    param('id').exists().toInt().custom(doctorId => {
-        return Doctor.findOne({ where: {id: doctorId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('Doctor id is not found.');
-                }
-            })
-    }),
-];
+const idValidationList = [idValidation];
+
 const updateDoctorValidation = [
-    param('id').exists().toInt().custom(doctorId => {
-        return Doctor.findOne({ where: {id: doctorId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('Doctor id is not found.');
-                }
-            })
-    }),
-];
-
-const deleteDoctorValidation = [
-    param('id').exists().toInt().custom(doctorId => {
-        return Doctor.findOne({ where: {id: doctorId} })
-            .then(id => {
-                if (!id) {
-                    return Promise.reject('Doctor id is not found.');
-                }
-            })
-    }),
+    check(commonProperty).custom(reqBody => {
+        return (commonProperty, reqBody) => reqBody.every(val => commonProperty.includes(val));
+    })
 ];
 
 export default {
     createDoctorValidation,
-    getDoctorsValidation,
-    getDoctorByIdValidation,
     updateDoctorValidation,
-    deleteDoctorValidation
+    idValidationList
 };

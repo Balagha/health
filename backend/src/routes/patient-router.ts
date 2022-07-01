@@ -1,17 +1,22 @@
 import patient from "../controllers/crud/patient-controller";
 import validation from "../validations/patient-validation"
 import {Router} from "express";
+import {validationResult} from "express-validator";
 
 const router = Router();
 
-router.post('/',validation.createPatientValidation , patient.createPatient);
+const validate = status => (req, res, next) => {
+    const errors = validationResult(req);
+    return errors.isEmpty() ? next() : res.status(status).json({errors: errors.array()});
+}
 
-router.get('/', validation.getPatientsValidation, patient.getPatients);
-
-router.get('/:id', validation.getPatientByIdValidation, patient.getPatientById);
-
-router.put('/:id',validation.updatePatientValidation , patient.updatePatient);
-
-router.delete('/:id', validation.deletePatientValidation, patient.deletePatient);
+router.post('/',validation.createPatientValidation , validate(400), patient.createPatient);
+router.get('/', patient.getPatients);
+router.get('/:id', validation.idValidationList, validate(404), patient.getPatientById);
+router.put('/:id',
+    validation.idValidationList, validate(404),
+    validation.updatePatientValidation , validate(400),
+    patient.updatePatient);
+router.delete('/:id', validation.idValidationList, validate(404), patient.deletePatient);
 
 export default router;

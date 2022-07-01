@@ -36,15 +36,13 @@ export class User extends BaseEntity{
     })
     email: string
 
-    @Column({
-        unique: true,
-    })
+    @Column()
     emergency_contact_number: string
 
-    @Column("simple-json")
-    official_id:{
-        type: string,
-        number: string
-    }
+    @Column()
+    official_id_type: string
+
+    @Column()
+    official_id_number: string
 
 }
