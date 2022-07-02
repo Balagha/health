@@ -7,24 +7,20 @@ import {updateUserEntity, updateDoctorAvailabilityEntity, updateDoctorForeignKey
 
 const relations = ["user_id", "doctor_availability_id", "doctor_specialization_id"];
 
-const addDoctor = (req, res) =>
-    User.save(createUser(req))
-        .then(userObj => Doctor.save(createDoctor(req, userObj))
-            .then(doctorObj => {
-                Promise.all([
-                    DoctorSpecialization.save(createSpecialization(req, doctorObj)),
-                    DoctorAvailability.save(createAvailability(req, doctorObj))
-                ]).then(obj => updateDoctorForeignKeys(doctorObj, obj[0], obj[1]).then(res.json));
-            })
-        );
+const addDoctor = (req, res) => User
+    .save(createUser(req))
+    .then(userObj => Doctor.save(createDoctor(req, userObj)))
+    .then(doctorObj =>
+        Promise.all([
+            DoctorSpecialization.save(createSpecialization(req, doctorObj)),
+            DoctorAvailability.save(createAvailability(req, doctorObj))
+        ]).then(([specialization, availablity]) => updateDoctorForeignKeys(doctorObj, specialization, availablity)))
+    .then(res.json);
 
 const updateDoctor = (req, res) => Doctor
-    .findOne({where:{id: req.params.id}})
-    .then(doctor => Promise.all([
-        updateUserEntity(req, doctor),
-        updateDoctorAvailabilityEntity(req, doctor)
-        ]).then(res.json)
-    );
+    .findOne({where: {id: req.params.id}})
+    .then(doctor => Promise.all([updateUserEntity(req, doctor), updateDoctorAvailabilityEntity(req, doctor)]))
+    .then(res.json);
 
 const getDoctors = (req, res) => Doctor.find({relations}).then(res.json);
 
