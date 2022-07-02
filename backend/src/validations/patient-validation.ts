@@ -2,12 +2,12 @@ import {check, param} from "express-validator";
 import {User} from "../entity/user";
 import {Patient} from "../entity/patient";
 
-const reqBody = {
+const sampleReqBody = {
     first_name: "Asif",
     last_name: "Joardar",
-    blood_group: "B+",
+    blood_group: "A+",
     gender: "Male",
-    date_of_birth: "29-08-1994",
+    date_of_birth: "01-01-1971",
     email: "abc@gmail.com",
     contact_number: "12345678910",
     emergency_contact_number: "12345678911",
@@ -17,10 +17,11 @@ const reqBody = {
     profession: "bekar",
     test_name: "blood test",
     test_type: "bla",
-    test_time: "01-06-2023",
-    test_report_delivery_time: "01-06-2024",
+    test_time: "01-06-3023",
+    test_report_delivery_time: "01-06-3024",
     test_result: "valo",
-    last_checkup_time: "01-06-2029",
+    comments: "ghumaben beshi kore",
+    last_checkup_time: "01-06-3029",
     blood_pressure: "123",
     weight: "100",
     height: "123"
