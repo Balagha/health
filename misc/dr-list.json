@@ -1,0 +1,902 @@
+[
+    {
+        "name": "Prof. Dr. Pran Gopal Datta",
+        "title": "MBBS, MCPS, ACORL, PhD, MSc (Audiology), FCPS (ENT), FRCS (Glasgow)",
+        "specialization": "Ear, Nose & Throat Specialist & Head Neck Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Syed Atiqul Haq",
+        "title": "MBBS, FCPS (Medicine), FRCP, MD (Rheumatology)",
+        "specialization": "Rheumatology & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Asst. Prof. Dr. Dulal Chandra Das",
+        "title": "MBBS, MD (Hepatology)",
+        "specialization": "Liver, Gallbladder, Biliary, Pancreas & Gastroenterology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Lt. Col. Dr. Md. Abdul Wahab",
+        "title": "MBBS, DDV, MCPS, FACP (USA), FCPS (Dermatology), FRCP (UK), Higher Training (Thailand)",
+        "specialization": "Skin, Allergy, Leprosy & Sexual Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. M. A. Salam",
+        "title": "MBBS, FCPS, FICS (USA), WHO Fellow (UK)",
+        "specialization": "Urology & Andrology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Mamun Al Mahtab Shwapnil",
+        "title": "MBBS, MSc (Gastro), MD (Hepatology), FACG (USA), FICP (India), FRCP (Ireland), FRCP (UK)",
+        "specialization": "Hepatologist & Gastroenterologist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Kamrul Hasan Tarafder",
+        "title": "MBBS, FCPS (ENT), FICS (USA), FACS (USA), FRCS (UK)",
+        "specialization": "ENT Specialist & Head Neck Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Mizanur Rahman",
+        "title": "MBBS, FCPS (Pediatric Neurology)",
+        "specialization": "Child Neurological Disorders, Development & Autism Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Mahmud Hasan",
+        "title": "MBBS, PhD (Edin), FCPS, FCPS (Pak), FRCP (Edin), FRCP (Glasgow)",
+        "specialization": "Gastroenterology, Liver & Pancreatic Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Farid Uddin",
+        "title": "MBBS, DEM, MD (Endocrinology)",
+        "specialization": "Diabetes, Thyroid & Hormone Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Mobin Khan",
+        "title": "MBBS, MSC (Hepatology), FCPS (BD & PK), FRCP (Glasg & Edin), FACP (USA), FCCP (USA)",
+        "specialization": "Liver Diseases & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Zahidul Haq",
+        "title": "MBBS, FCPS (Surgery), FRCS (Glasgow), MS (Surgery), FICS, Fellow Colorectal Surgery (Singapore)",
+        "specialization": "Colorectal, Laparoscopic & General Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. A.Z.M. Zahid Hossain",
+        "title": "MBBS, FCPS (Surgery), MS (Urology), FCPS (Urology), FRCP (EDIN)",
+        "specialization": "Urology Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Ahmed Nazmul Anam",
+        "title": "MBBS, BCS (Health), FCPS (Pediatrics), MD (Child Cardiology), PGPN (USA)",
+        "specialization": "Child, Child Cardiology & Nutrition Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Shohael Mahmud Arafat",
+        "title": "MBBS, FCPS (Medicine), MRCP (UK)",
+        "specialization": "Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. AKM Anwar Ullah",
+        "title": "MBBS, FCPS (Medicine), FRCP (EDIN)",
+        "specialization": "Neuromedicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Muhammad Shoaib Momen Majumder",
+        "title": "MBBS, FCPS (Medicine), MACP (USA), MD (Rheumatology)",
+        "specialization": "Rheumatology & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Sayeba Akhter",
+        "title": "MBBS, FCPS (OBGYN), FCPS (PAK), FICMCH (IN), DRH (UK)",
+        "specialization": "Gynecology, Obstetrics Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Shahidul Islam Selim",
+        "title": "MBBS, MCPS (Medicine), MD (Nephrology), FACP, FASN (USA), FRCP (UK)",
+        "specialization": "Kidney Diseases & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Anwarul Kabir",
+        "title": "MBBS, MD (Gastroenterology)",
+        "specialization": "Gastroenterology, Liver & Pancreatic Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. AKM Fazlul Haque",
+        "title": "MBBS, FCPS (Surgery), FICS (USA), Fellow Colorectal Surgery (Singapore)",
+        "specialization": "Colorectal (Piles, Rectum, Colon) Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Marufa Mustari",
+        "title": "MBBS, FCPS (Endocrinology & Metabolism), MACE (USA)",
+        "specialization": "Diabetes, Thyroid & Hormone Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Abdul Mannan",
+        "title": "MBBS, FCPS, MD (Pediatric), MD (Neonatology), NUH (Singapore)",
+        "specialization": "Newborn & Child Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. ABM Khalekuzzaman Shipon",
+        "title": "MBBS, PGT (SKIN & VD), FRSH (London), Training (Dermato & Cosmetic Surgery)",
+        "specialization": "Skin, Sexual Diseases, Allergy, Hair Specialist & Cosmetic Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Minhaj Rahim Choudhury",
+        "title": "MBBS FCPS, MD, DTCD, FACR (USA), Fellow (Rheumatology, UK)",
+        "specialization": "Rheumatology, Chest & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Sheikh Hasanur Rahman",
+        "title": "MBBS, FCPS (ENT), MS (ENT)",
+        "specialization": "ENT Specialist & Head Neck Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Saiful Islam Bhuiyan",
+        "title": "MBBS, MD (Dermatology)",
+        "specialization": "Skin, Allergy, Leprosy & Sex Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. M. Nazrul Islam",
+        "title": "MBBS, FCPS, FRCP (Edin), FCCP (USA), FACC (USA), FESC",
+        "specialization": "Cardiology, Heart Diseases, Rheumatic Fever, Hypertension & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. A.H.M. Towhidul Alam",
+        "title": "MBBS, FCPS (Surgery), FRCS (Glasgow), FACS (USA)",
+        "specialization": "Gastrointestinal, Pancreato-Biliary, Endoscopic & Laparoscopic Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Moniruzzaman Bhuiyan",
+        "title": "MBBS, MD (Neurology), MACP (USA)",
+        "specialization": "Neurology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. S A Khan",
+        "title": "MBBS, FCPS (Surgery), MS (Urology)",
+        "specialization": "Urology (Kidney, Ureters, Bladder, Prostate) Specialist & Transplant Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Jhunu Shamsun Nahar",
+        "title": "MBBS, FCPS (Psychiatry) , IFAPA (USA)",
+        "specialization": "Psychiatrist & Psychotherapist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Anisul Haque",
+        "title": "MBBS, PhD, FCPS (Medicine), FRCP (Edin)",
+        "specialization": "Brain, Stroke, Nerve, Headache, Migraine & Neurology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. ABM Abdullah",
+        "title": "MBBS, MRCP (UK), FRCP (EDIN)",
+        "specialization": "Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Kanak Kanti Barua",
+        "title": "MBBS, FCPS (Surgery), MS (Neurosurgery), PhD, FICS",
+        "specialization": "Brain, Nerve, Spine & Neurosurgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Surajit Roy Chowdhury",
+        "title": "MBBS, MD (Psychiatry)",
+        "specialization": "Mental Health Specialist & Psychotherapist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Abul Kalam Azad",
+        "title": "MBBS, FCPS (Medicine)",
+        "specialization": "Medicine, Digestion & Liver Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. A.K.M. Anwarul Islam",
+        "title": "MBBS, FCPS (Surgery), FRCS, FICS, Clinical Fellow in Urology (WHO)",
+        "specialization": "Urology (Kidneys, Ureters, Prostate) Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Mst. Rawson Ara Khatun (Rita)",
+        "title": "MBBS, BCS (Health), FCPS (OBGYN)",
+        "specialization": "Gynecology, Obstetrics, Infertility Diseases Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. A. K. Ahmedullah",
+        "title": "MBBS, MD (Internal Medicine), MD (Rheumatology)",
+        "specialization": "Medicine & Rheumatology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Rajashish Chakrabortty",
+        "title": "MBBS (DMC), FCPS (Medicine), MD (Chest Diseases), FCCP (USA)",
+        "specialization": "Chest Diseases & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Golam Mowla Chowdhury",
+        "title": "MBBS, PhD (UK), Postdoctoral Fellow (Japan)",
+        "specialization": "Urologist & Uro-Oncologist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Monjurul Alam",
+        "title": "MBBS, FCPS (ENT), MS (ENT), FICS (USA), FESS (India)",
+        "specialization": "ENT Specialist & Head Neck Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Rukunuzzaman",
+        "title": "MBBS, FCPS (Pediatrics), MD (Pediatric Gastroenterology)",
+        "specialization": "Child & Child Gastroenterology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Afiqul Islam",
+        "title": "MBBS, FCPS (Pediatrics), MD (Pediatric Hematology & Oncology)",
+        "specialization": "Child Blood Diseases & Cancer Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Kamrul Ahsan",
+        "title": "MBBS, D-ORTHO (DU), MS (ORTHO)",
+        "specialization": "Orthopedics, Trauma & Spine Specialist Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Projesh Kumar Roy",
+        "title": "MBBS, FCPS (Medicine), MD (Gastroenterology)",
+        "specialization": "Gastroenterology, Medicine, Pancreas & Liver Disease Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Taslim Uddin",
+        "title": "MBBS, FCPS (Physical Medicine & Rehabilitation)",
+        "specialization": "Pain, Arthritis, Paralysis, Stroke, Physical Medicine & Rehabilitation Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Rafiqul Islam",
+        "title": "MBBS, FCPS (Medicine)",
+        "specialization": "Fellow Neurology, WHO (Thailand), Trained in Neurosonology (Singapore)",
+        "work_place": "Neurology & Medicine Specialist"
+    },
+    {
+        "name": "Prof. Dr. Shahadot Hossain Sheikh",
+        "title": "MBBS, FCPS (Surgery), MRCS (EDIN), FRCS (GLAS)",
+        "specialization": "General & Colorectal Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Samia Mubin",
+        "title": "MBBS (DMC), FCPS (Surgery), MRCS (UK)",
+        "specialization": "General, Laparoscopic & Breast Specialist Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Sajal Banerjee",
+        "title": "MBBS, MD (Cardiology), FCPS, FACC (USA), FISC (USA)",
+        "specialization": "Cardiology & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Towhid Md. Saiful Hossain Dipu",
+        "title": "MBBS, FCPS (Surgery), MS (Urology), Fellowship (Laparoscopic & Endoscopic)",
+        "specialization": "Asia Pacific Preceptorship in Urology (Singapore), Advanced Training in Urology (USA, Singapore, India)",
+        "work_place": "Urology Specialist & Surgeon"
+    },
+    {
+        "name": "Dr. Ayesha Rahman",
+        "title": "MBBS, BCS (Health), MCPS (Surgery), FCPS (Surgery)",
+        "specialization": "General, Colorectal & Breast Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Sharmin Jahan",
+        "title": "MBBS, FCPS (Medicine), MD (Endocrinology)",
+        "specialization": "Diabetes, Thyroid & Hormone Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Mohammad Abul Kalam Azad",
+        "title": "MBBS, FCPS (Medicine), MD (Rheumatology)",
+        "specialization": "Arthritis, Pain, Paralysis, Rheumatology & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. M. Abu Hena Chowdhury",
+        "title": "MBBS, DDV, FCPS (Dermatology)",
+        "specialization": "Skin, Allergy, Leprosy & Sex Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Latifa Shamsuddin",
+        "title": "MBBS, FCPS (OBGYN-BD), FCPS (OBGYN-PK), FICS (USA)",
+        "specialization": "Gynecology, Obstetrics Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. M. A. Shakoor",
+        "title": "MBBS, FCPS (Physical Medicine), PhD (CU)",
+        "specialization": "Pain, Arthritis, Paralysis, Stroke, Physical Medicine & Rehabilitation Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Syed Mozaffar Ahmed",
+        "title": "MBBS, FCPS (Physical Medicine), PhD (Rheumatology), MACP (USA)",
+        "specialization": "Physical Medicine & Rheumatology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Kazi Nasid Naznin",
+        "title": "MBBS, FCPS (Surgery), MS (Colorectal Surgery)",
+        "specialization": "General, Breast & Colorectal Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Jesmine Banu",
+        "title": "MBBS, MS (OBGYN)",
+        "specialization": "Gynecology, Obstetrics, Infertility Specialist & Laparoscopic Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Tania Tofail",
+        "title": "MBBS, CCD (BIRDEM), MRCP (UK), MD (Endocrinology)",
+        "specialization": "Diabetes & Hormone Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Shamsul Alam",
+        "title": "BDS, DCD (USSR), FADI (USA)",
+        "specialization": "Dental, Oral & Maxillofacial Surgery Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Habibur Rahman",
+        "title": "MBBS, FCPS, MSc (UK), FRCP (UK)",
+        "specialization": "Kidney Diseases & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Mohsin Ali Shah",
+        "title": "MBBS, M.Phil (Psychiatry), MD (Psychiatry)",
+        "specialization": "Mental Diseases, Drug Addiction, Sex Medicine & Psychiatry Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. A.S.M.A. Raihan",
+        "title": "MBBS, MD (Gastroenterology), FRCP (UK)",
+        "specialization": "Gastrointestinal, Liver Medicine & Pancreatic Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Fahmida Zabin",
+        "title": "MBBS, FCPS (OBGYN), MMED (DU)",
+        "specialization": "Gynecology, Obstetrics Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. M A Hasanat",
+        "title": "MBBS, MPhil, MD (Endocrinology)",
+        "specialization": "Diabetes, Thyroid & Hormone Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Hasan Zahidul Rahman",
+        "title": "MBBS, MD (Neurology)",
+        "specialization": "Neurology (Brain, Nerve, Stroke, Headache, Migraine) Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Shafiqul Alam",
+        "title": "MBBS, MS (Ortho Surgery)",
+        "specialization": "Orthopedic Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Munir Rashid",
+        "title": "MBBS, MD (Derma), MRCP (Glasgow)",
+        "specialization": "Skin Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Salimur Rahman",
+        "title": "MBBS (DMC), FCPS (Medicine), FRCP (Ireland), FRCP (Edinburgh)",
+        "specialization": "Fellowship in Liver Disease & Endosocopy (Japan)",
+        "work_place": "Medicine & Liver Diseases Specialist"
+    },
+    {
+        "name": "Prof. Dr. Muhammad Nazrul Islam",
+        "title": "MBBS, FCPS (Medicine), MD (Nephrology)",
+        "specialization": "Kidney Disease Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Mohammad Jamal Uddin",
+        "title": "MBBS, MD (Dermatology)",
+        "specialization": "Skin, Leprosy, Allergy & Sexual Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. ATM Asaduzzaman",
+        "title": "MBBS, MD (Dermatology)",
+        "specialization": "Skin, Allergy & Sexual Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Abul Khair",
+        "title": "MBBS, FCPS (Surgery), Fellow Neurosurgery (Australia)",
+        "specialization": "Neurosurgery (Brain Surgery) Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Mohammad Hossain",
+        "title": "MBBS, MS (Neurosurgery), FICS (Neurosurgery)",
+        "specialization": "Trained Spine Surgery (USA), Endoscopic Spine Surgery (Switzerland)",
+        "work_place": "Neurosurgery (Brain & Spine) Specialist"
+    },
+    {
+        "name": "Prof. Dr. Md. Abdus Sattar",
+        "title": "MBBS, DLO, FCPS (ENT), MS (ENT), Head Neck Fellow (USA), Higher Training (India, USA)",
+        "specialization": "Ear, Nose, Throat Specialist & Head Neck Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Abu Nasir Rizvi",
+        "title": "MBBS, MD (Neurology)",
+        "specialization": "Neurology (Brain, Spinal Cord, Nerve & Migraine) & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Rafiqul Alam",
+        "title": "MBBS, FCPS (Medicine), MD (Chest)",
+        "specialization": "Chest Diseases, Asthma, COPD & Respiratory Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Wahiduzzaman",
+        "title": "MBBS, FCPS (ENT), MS (ENT)",
+        "specialization": "Ear, Nose, Throat Specialist & Head Neck Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Asia Khanam",
+        "title": "MBBS, MD (Nephrology)",
+        "specialization": "Kidney Diseases & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Parveen Akhter Surovi",
+        "title": "MBBS, FCPS (OBGYN), MRCOG2 (UK)",
+        "specialization": "Gynecology, Infertility Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Bahadur Ali Miah",
+        "title": "MBBS, MD (Neurology)",
+        "specialization": "Fellow Interventional Neurology & Stroke Therapy, SGRH (New Delhi)",
+        "work_place": "Brain, Stroke & Neuromedicine Specialist"
+    },
+    {
+        "name": "Prof. Dr. Shirin Akter Begum",
+        "title": "MBBS, DGO, MCPS, MS (OBGYN)",
+        "specialization": "Gynecology, Obstetrics, Gynecological Cancer Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Azharul Islam",
+        "title": "MBBS, FCPS (ENT), FICS (USA)",
+        "specialization": "Ear, Nose, Throat Specialist & Head Neck Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Nargish Khanam",
+        "title": "MBBS, BCS (Health), FCPS (OBGYN), FCPS Thesis (Infertility), CPD (UK), DMU (USG)",
+        "specialization": "Specialized Training in IVF & Infertility (India)",
+        "work_place": "Gynecology, Obstetrics, Infertility Specialist & Laparoscopic Surgeon"
+    },
+    {
+        "name": "Dr. Md. Imnul Islam Imon",
+        "title": "MBBS, FCPS, MD (Child)",
+        "specialization": "Child Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. ASM Bazlul Karim",
+        "title": "MBBS, FCPS (Pediatrics), Fellow (Pediatric Gastroenterology & Nutrition)",
+        "specialization": "Pediatric Gastroenterology & Nutrition Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. M. T. Rahman",
+        "title": "MBBS, FCPS, Training (France & japan)",
+        "specialization": "Gastrointestinal, Liver & Pancreatic Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. M. A. A. Mamun",
+        "title": "MBBS, DDV, FCPS (Dermatology & Venereology)",
+        "specialization": "Skin, Sexual Diseases & Allergy Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. S. M. Ishaq",
+        "title": "MBBS, DTM, MD (Gastroenterology)",
+        "specialization": "Gastroenterology & Liver Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Mohammed Tanvir Jalal",
+        "title": "MBBS (DMC), FCPS (Surgery)",
+        "specialization": "Colorectal, Laparoscopic & General Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Atiar Rahman",
+        "title": "MBBS, DCH, FCPS (Pediatrics), MD (Pediatrics)",
+        "specialization": "Child Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Salma Akter Munmun",
+        "title": "MBBS, MCPS, FCPS (Gynae)",
+        "specialization": "Gynecologist, Obstetrics & Infertility Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Manzoor Mahmood",
+        "title": "MBBS (DMC), D-CARD (DU), MD (Cardiology), MSc (UK)",
+        "specialization": "Cardiologist & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Nazrul Islam",
+        "title": "MBBS, FCPS (Medicine), MD (Internal Medicine), Rheumatology Fellowship (Australia)",
+        "specialization": "Rheumatology & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Abu Shahin",
+        "title": "MBBS, FCPS (Medicine), MD (Rheumatology)",
+        "specialization": "Rheumatology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Begum Nasrin",
+        "title": "MBBS, FCPS (OBGYN), MS (OBGYN)",
+        "specialization": "Trained in Laparoscopic Surgery & Infertility (Singapore & India)",
+        "work_place": "Gynecology, Infertility Specialist & Surgeon"
+    },
+    {
+        "name": "Dr. Md. Ektedar Rahman Shawon",
+        "title": "MBBS, BCS (Health), DDV (BSMMU)",
+        "specialization": "Skin, Allergy, Leprosy, Melasma, Hair, Nail & Sexual Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Omar Faruk",
+        "title": "MBBS, MD (Nephrology)",
+        "specialization": "Kidney Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Nooruddin Ahmad",
+        "title": "MBBS, FCPS (Med), Training (Liver, Japan & Thailand)",
+        "specialization": "Liver & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. A.K.M. Aminul Haque",
+        "title": "MBBS, FCPS (Medicine), MD (Chest), FACP (USA)",
+        "specialization": "Chest Diseases & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Shaheen Ara Anwary",
+        "title": "MBBS, FCPS (OBGYN), MS, Diploma (Ultra)",
+        "specialization": "Gynecology & Obstetrics Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Sumaiya Akter",
+        "title": "MBBS, BCS (Health), FCPS (OBGYN)",
+        "specialization": "Gynecologist & Infertility Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Tarun Kanti Sarker",
+        "title": "MBBS (DMC), BCS (Health), MD (Neurology)",
+        "specialization": "Neurology (Brain, Stroke, Nerve, Spine, Migraine) & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Hosne Ara Nargis Shumi",
+        "title": "MBBS, BCS, MS (Urology)",
+        "specialization": "Urology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Harasit Kumar Paul",
+        "title": "MBBS, MD (Skin & Sex)",
+        "specialization": "Skin & Sexual Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Ahsan Ullah",
+        "title": "MBBS, FCPS (Physical Medicine)",
+        "specialization": "Arthritis, Pain, Paralysis, Rheumatic Fever & Physical Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Bilkis Ferdous",
+        "title": "MBBS, DGO, FCPS (OBGYN)",
+        "specialization": "Gynecology & Obstetrics Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Kamrul Hassan Shabuj",
+        "title": "MBBS, FCPS (Ped), MD (Neonatology)",
+        "specialization": "Child Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Biplob Kumar Saha",
+        "title": "MBBS (Dhaka), BCS (Health), MD (Hepatology)",
+        "specialization": "Liver Specialist & Hepatologist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Parveen Sultana",
+        "title": "MBBS, DGO, FCPS (OBGYN)",
+        "specialization": "Gynecology, Obstetrics Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Abu Taher",
+        "title": "MBBS, MS (Surgery), FRCS (UK), FACS (USA), FISCP (IN), FASCRS (USA)",
+        "specialization": "Colorectal, Laparoscopic & Laser Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Chanchal Kumar Ghosh",
+        "title": "MBBS, FCPS (Medicine), MD (Gastroenterology)",
+        "specialization": "Trained in Therapeutic Endoscopy & ERCP ( South Korea & India)",
+        "work_place": "Gastroenterology, Liver & Pancreas Specialist"
+    },
+    {
+        "name": "Prof. Dr. Md. Shoaib Chowdhury",
+        "title": "MBBS, MD (Gastroenterology)",
+        "specialization": "Gastroenterology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Shamsul Ahsan Maksud",
+        "title": "MBBS, MPHIL (Psych), FCPS (Psych), FECSM (Sex)",
+        "specialization": "Mental Health & Sexual Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Delwar Hossain",
+        "title": "MBBS, FCPS (ENT)",
+        "specialization": "Microear & Cochlear Implant Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Zulfiqur Rahman Khan",
+        "title": "MBBS, FCPS (Surgery), FRCA (UK), FICS (USA)",
+        "specialization": "General & Pancreatic Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Bidhan C. Das",
+        "title": "MBBS, FCPS (Surgery), PhD, Fellow Liver Transplant Surgery (India & Japan)",
+        "specialization": "Hepatobiliary, Pancreatic & Liver Transplant Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Mohammad Safiuddin",
+        "title": "MBBS, MD (Cardiology), FRCP (Edin). FACC (USA), FCCP, FESC, FRCP",
+        "specialization": "Cardiology & Heart Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Nuruzzaman Khandaker Noman",
+        "title": "MBBS, FCPS (Physical Medicine & Rehabilitation), Fellow (Rheumatology)",
+        "specialization": "Physical Medicine & Rheumatology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Ali Faisal Liton",
+        "title": "MBBS, MS (Ortho Surgery)",
+        "specialization": "Orthopedic Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Rafiqul Alam",
+        "title": "MBBS, MD (Nephro), FCPS (Medi)",
+        "specialization": "Kidney Disease Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Syedul Islam",
+        "title": "MBBS, FCPS (Medicine), CCD (BIRDEM), MD (Gastro)",
+        "specialization": "Medicine & Gastroenterology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Moinul Hossain",
+        "title": "MBBS, FCPS (Anesthesiology), Training (Japan)",
+        "specialization": "Pain Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Khaleda Nasreen",
+        "title": "MBBS, BCS (Health), FCPS (OBGYN)",
+        "specialization": "Gynecology & Obstetrics Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Mosleh Uddin",
+        "title": "MBBS, MCPS, MS (ENT)",
+        "specialization": "ENT Specialist & Head Neck Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Jannatul Ferdous Jonaki",
+        "title": "MBBS (DMC), FCPS (OBGYN), FCPS (Gynecological Oncology)",
+        "specialization": "Gynecological Cancer Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Kazi Farhana Begum",
+        "title": "MBBS, FCPS (OBGYN)",
+        "specialization": "Gynecology & Obstetrics Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Shamim Ahmed",
+        "title": "MBBS, FCPS (Medicine), Fellow in Rheumatology (Singapore)",
+        "specialization": "Medicine & Rheumatology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Lubna Khondker",
+        "title": "MBBS, MPH, DDV (BSMMU), MCPS, FCPS (Dermatology & Venereology)",
+        "specialization": "Fellowship Training in Cutaneous & LASER Surgery (Thailand)",
+        "work_place": "Skin, Hair, Nail, STDs, Cosmetology, Dermatosurgery & Laser Treatment Specialist"
+    },
+    {
+        "name": "Dr. Hasan Imam",
+        "title": "MBBS, MD (Internal Medicine), CCD (BIRDEM)",
+        "specialization": "Medicine & Diabetes Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Shaheen Akhter",
+        "title": "MBBS (DMC), MD (Pediatric Neurology)",
+        "specialization": "Pediatric Neurological Disorders, Development & Autism Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Kazi Ashraful Islam",
+        "title": "MBBS, MCPS, MD (Pediatrics)",
+        "specialization": "Pediatric Neurodisorder & Autism Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Subash Kanti Dey",
+        "title": "MBBS, MD (Neurology), FINS (India)",
+        "specialization": "Neurology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Khondokar Mahabub Uz Zaman",
+        "title": "MBBS, BCS (Health), MD",
+        "specialization": "Rheumatology Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Azizul Hoque Manik",
+        "title": "MBBS, BCS (Health), DLO, MCPS, FCPS (ENT), Fellowship Trainee (Head Neck Surgery)",
+        "specialization": "Ear, Nose, Throat Specialist & Head Neck Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Shikder Md. Ruhul Quddus Biplob",
+        "title": "MBBS, MS (Neuro Surgery)",
+        "specialization": "Brain Spine & Specialist Neurosurgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Kamruzzaman",
+        "title": "MBBS, BCS (Health), MD (Cardiology)",
+        "specialization": "Cardiology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Zahida Jabbar",
+        "title": "MBBS,FCPS (Eye), DO (BSMMU)",
+        "specialization": "Eye Specialist and Phaco Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Nahreen Akhtar",
+        "title": "MBBS, DGO, FCPS (OBGYN)",
+        "specialization": "Gynecology, Obstetrics, High Risk Pregnancy Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. Md. Saleh Uddin",
+        "title": "MBBS, FCPS (BD), MS (EYE), MHPED (AU), FCPS (PK), FICS",
+        "specialization": "Eye Specialist & Surgeon",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. S.I.M. Khairun Nabi Khan",
+        "title": "MBBS, MS (Neurosurgery)",
+        "specialization": "Neurosurgery Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Mizu Ahamed",
+        "title": "MBBS, BCS (Health), DDV, MD (Skin & Sex)",
+        "specialization": "Skin & Sexual Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Md. Zahidur Rahman",
+        "title": "MBBS, MD (Gastroenterology)",
+        "specialization": "Gastroenterologist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. Sheikh Mohammad Noor-E-Alam",
+        "title": "MBBS, MD (Hepatology)",
+        "specialization": "Liver & Pancreatic Diseases Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Dr. M Amir Hossain",
+        "title": "MBBS, BCS (Health), FCPS (Medicine), MD (Neurology)",
+        "specialization": "Neurology & Medicine Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+        "name": "Prof. Dr. A. Masud Chowdhury",
+        "title": "MBBS, DDV, DD, MS",
+        "specialization": "Dermatology Specialist",
+        "work_place": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    }
+]
