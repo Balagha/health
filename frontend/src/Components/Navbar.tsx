@@ -1,5 +1,6 @@
 import React from 'react';
 import healthIcon from './images/logo.svg';
+import {Link} from "react-router-dom"
 function Navbar(){
     return(
        <div className="text-black flex justify-between box-border bg-backgoround p-5 max-w-full mx-4 ">
@@ -28,8 +29,8 @@ function Navbar(){
                </ul>
            </div>
            <div className="md:flex h-10 items-center mr-5 border border-blue-500 rounded-full mt-2">
-               <button className="box-border p-2 w-50 h-10">Sign In</button>
-               <button className="box-border rounded-full w-50 h-10 bg-blue-500 p-2 text-white">Sign Up</button>
+               <Link to="/signin" className="box-border p-2 w-50 h-10">Sign In</Link>
+               <Link to="/signup" className="box-border rounded-full w-50 h-10 bg-blue-500 p-2 text-white">Sign Up</Link>
            </div>
 
        </div>
