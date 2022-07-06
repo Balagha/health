@@ -1,6 +1,5 @@
 import React from 'react';
 import signup from './images/signupimg.png'
-import {BsCircleFill} from "react-icons/bs";
 
 function SignUpForm (){
     return(

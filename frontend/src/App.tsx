@@ -1,15 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-
 import Navbar from "./Components/Navbar";
-import DoctorSection from "./Components/DoctorSection";
 import SignUpForm from "./Components/SignUpForm";
+import SignInForm from "./Components/signInForm";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <div className="font-roboto">
-        <Navbar/>
-        <SignUpForm/>
+        <BrowserRouter>
+            <Navbar/>
+            <Routes>
+                <Route path="/signup" element={<SignUpForm/>}/>
+                <Route path="/signin" element={<SignInForm/>}/>
+            </Routes>
+        </BrowserRouter>
     </div>
   );
 }
