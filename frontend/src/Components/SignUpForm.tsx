@@ -23,11 +23,11 @@ function SignUpForm (){
                             <input type="text" placeholder="passort/nid/birth certificate number" className="pl-2 p-1 m-2 rounded-full shadow-2xl focus:outline-none"/>
                         </div>
                         <div className="w-1/2 m-8 flex flex-col relative">
-                            <img src={signup} className="p-4"/>
+                            <img alt="" src={signup} className="p-4"/>
                             <div className="flex ml-20">
 
                                 <h1 className="p-2">
-                                    <a href="#">Sign in as doctor</a>
+                                    <a href="/#">Sign in as doctor</a>
                                      </h1>
                                 <button className="bg-blue-500 px-8 text-white rounded">Sign In</button>
                             </div>
