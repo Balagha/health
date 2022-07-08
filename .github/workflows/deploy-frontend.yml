@@ -1,8 +1,8 @@
-name: deploy
+name: deploy-frontend
 
 on:
   push:
-    branches: [ "dummy-aws-s3" ]
+    branches: [ "master" ]
 
   workflow_dispatch:
 
