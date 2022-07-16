@@ -15,6 +15,9 @@ function Navbar(){
                     <a className="text-[#258AFF] text-xl" href="/#">Home</a>
                    </li>
                    <li className="p-4">
+                    <a className="text-[#258AFF] text-xl" href="/#">Contacts</a>
+                   </li>
+                   <li className="p-4">
                        <a className="text-[#258AFF] text-xl" href="/#">Pages</a>
                    </li>
                    <li className="p-4">
