@@ -45,8 +45,9 @@ jobs:
             . ~/.nvm/nvm.sh
             nvm instal 16
             npm install -g pm2
+            cd ~/health
             git pull origin master
-            cd ~/health/backend
+            cd /backend
             rm -rf node_modules package-lock.json
             npm install
             pm2 restart backend
