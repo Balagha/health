@@ -7,7 +7,7 @@ const app =express();
 
 AppDataSource.initialize().then(async () => {
     app.use(BodyParser.json());
-    //app.use('/api', router);
+    // app.use('/api', router);
     app.get('/', (req, res) => {
 	  res.send('Hello World!')
 	})
