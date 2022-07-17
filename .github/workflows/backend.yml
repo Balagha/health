@@ -3,7 +3,8 @@ name: backend
 on:
   push:
     branches: [ "master" ]
-    
+    paths:
+      - backend
 
 defaults:
       run:
