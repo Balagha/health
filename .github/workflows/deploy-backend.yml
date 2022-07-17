@@ -47,5 +47,6 @@ jobs:
             npm install -g pm2
             git pull origin master
             cd ~/health/backend
+            rm -rf node_modules package-lock.json
             npm install
             pm2 restart backend
