@@ -52,3 +52,4 @@ jobs:
             rm -rf node_modules package-lock.json
             npm install
             pm2 restart backend
+
