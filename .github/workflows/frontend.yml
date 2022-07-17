@@ -3,8 +3,7 @@ name: frontend
 on:
   push:
     branches: [ "master" ]
-    paths:
-      - frontend
+    
 
   workflow_dispatch:
 
