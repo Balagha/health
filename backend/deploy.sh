@@ -15,6 +15,5 @@ sudo npm install
 echo "Build your app"
 sudo npm run build
 
-echo "Run new PM2 action"
-sudo cp /home/ubuntu/ecosystem.json ecosystem.json
-sudo pm2 start --no-daemon ecosystem.json
+echo "Restart PM2 action"
+sudo pm2 restart health
