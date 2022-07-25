@@ -1,9 +1,8 @@
 import React from 'react';
 import Navbar from "./Components/Navbar";
-import SignUpForm from "./Components/SignUpForm";
+import SignUpForm from "./Components/signUpForm/SignUpForm";
 import SignInForm from "./Components/signInForm";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-
 function App() {
   return (
     <div className="font-roboto">
