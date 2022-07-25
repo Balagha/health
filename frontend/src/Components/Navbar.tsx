@@ -1,9 +1,9 @@
 import React from 'react';
-import healthIcon from './images/logo.svg';
+import healthIcon from '../images/logo.svg';
 import {Link} from "react-router-dom"
 function Navbar(){
     return(
-       <div className="text-black flex justify-between box-border bg-backgoround p-5 max-w-full mx-4 ">
+       <div className="text-black flex justify-between box-border bg-backgoround p-5 relative">
            <div className="md:flex items-center ml-1 w-50 mt-1">
                <img alt="" src={healthIcon} className=""/>
                <h1 className="text-2xl">Health</h1>
@@ -32,8 +32,8 @@ function Navbar(){
                </ul>
            </div>
            <div className="md:flex h-10 items-center mr-5 border border-blue-500 rounded-full mt-2">
-               <Link to="/signin" className="box-border p-2 w-50 h-10">Sign In</Link>
-               <Link to="/signup" className="box-border rounded-full w-50 h-10 bg-blue-500 p-2 text-white">Sign Up</Link>
+               <Link to="/signin" className="box-border p-2 w-20 ">Sign In</Link>
+               <Link to="/signup" className="box-border rounded-full bg-blue-500 p-2 text-white">Sign Up</Link>
            </div>
 
        </div>

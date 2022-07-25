@@ -1,12 +1,12 @@
 import React from "react";
-import doctorImg from './images/doctor.png'
-import vr from './images/VR.png'
-import fb from './images/fb.png'
-import google from './images/g.png'
-import li from './images/li.png'
-import ellipse2 from "./images/Ellipse 2.png"
-import cardio from "./images/cardiolist.png"
-import online from "./images/online.png"
+import doctorImg from '../images/doctor.png'
+import vr from '../images/VR.png'
+import fb from '../images/fb.png'
+import google from '../images/g.png'
+import li from '../images/li.png'
+import ellipse2 from "../images/Ellipse 2.png"
+import cardio from "../images/cardiolist.png"
+import online from "../images/online.png"
 
 function DoctorSection(){
     return(
