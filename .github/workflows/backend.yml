@@ -4,27 +4,27 @@ on:
   push:
     branches: [ "master" ]
 
-  workflow_dispatch:
 
 defaults:
       run:
         working-directory: backend
 
 jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
+  build:
+
+    runs-on: self-hosted
+
+    strategy:
+      matrix:
+        node-version: [16.x]
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v1
-      - name: executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            cd health/backend
-            sh deploy.sh
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
