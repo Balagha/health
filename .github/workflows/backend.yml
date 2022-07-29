@@ -37,6 +37,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+     - run: cd /home/ubuntu/health/backend
      - name: SSH deploy
        uses: appleboy/ssh-action@master
        with:
