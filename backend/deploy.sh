@@ -2,13 +2,12 @@ echo "Kill all the running PM2 actions"
 sudo pm2 kill
 
 echo "Jump to app folder"
-cd /home/ubuntu/health
+cd /home/ubuntu/health/backend
 
 echo "Update app from Git"
 git pull
 
 echo "Install app dependencies"
-cd backend
 sudo rm -rf node_modules package-lock.json
 sudo npm install
 

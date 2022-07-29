@@ -24,6 +24,6 @@
       "tsc": "tsc",
       "start": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
       "typeorm": "typeorm-ts-node-commonjs",
-      "build": "ts-node src/index.ts"
+      "build": "npx tsc"
    }
 }
