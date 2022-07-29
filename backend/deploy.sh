@@ -1,6 +1,3 @@
-echo "Kill all the running PM2 actions"
-pm2 kill
-
 echo "Jump to app folder"
 cd /home/ubuntu/health/backend
 
@@ -13,6 +10,3 @@ npm install
 
 echo "Build app"
 npm run build
-
-echo "Restart PM2 action"
-pm2 start npm --name health-backend -- run prod
