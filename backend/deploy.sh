@@ -15,4 +15,4 @@ echo "Build your app"
 sudo npm run build
 
 echo "Restart PM2 action"
-sudo pm2 restart health
+sudo pm2 restart health-backend
