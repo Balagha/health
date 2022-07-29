@@ -37,7 +37,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - run: cd /home/ubuntu/health/backend
      - name: SSH deploy
        uses: appleboy/ssh-action@master
        with:
@@ -45,6 +44,8 @@ jobs:
           username:  ${{ secrets.USER }}
           key:  ${{ secrets.KEY }}
           port:  ${{ secrets.PORT }}
-          script: sh deploy.sh
-     - run: pm2 restart health-backend
+          script: |
+            cd /home/ubuntu/health/backend
+            sh deploy.sh
+            pm2 restart health-backend
     
