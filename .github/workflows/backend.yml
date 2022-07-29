@@ -45,5 +45,5 @@ jobs:
           key:  ${{ secrets.KEY }}
           port:  ${{ secrets.PORT }}
           script: sh deploy.sh
-          run: pm2 restart health-backend
+     - run: pm2 restart health-backend
     
