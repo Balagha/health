@@ -47,7 +47,16 @@ jobs:
           key:  ${{ secrets.KEY }}
           port:  ${{ secrets.PORT }}
           script: |
+            curl -o-   https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+            . ~/.nvm/nvm.sh
+            nvm instal 16
+            npm install -g pm2
+            cd /home/ubuntu
+            sudo rm -rf health
+            git clone https://github.com/asifjoardar/health.git
             cd /home/ubuntu/health/backend
-            sh deploy.sh
+            npm install
+            npm run build
+            pm2 start npm --name health-backend -- run prod
             pm2 restart health-backend
     
