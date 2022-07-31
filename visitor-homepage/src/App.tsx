@@ -3,6 +3,8 @@ import Navbar from "./Components/Navbar";
 import Topbar from "./Components/Topbar";
 import {BrowserRouter} from "react-router-dom";
 import Slider from './Components/Slider';
+import About from './Components/About';
+import Doctors from './Components/Doctors';
 // Routes, Route
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
             <hr/>
             <Navbar/>
             <Slider/>
+            <About/>
+            <Doctors/>
         </BrowserRouter>
     </div>
   );
