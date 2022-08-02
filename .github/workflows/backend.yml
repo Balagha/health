@@ -41,8 +41,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - name: env variables
-       env:
+     - env:
         DB_TYPE: ${{ secrets.DB_TYPE }}
         DB_HOST: ${{ secrets.DB_HOST }}
         DB_PORT: ${{ secrets.DB_PORT }}
