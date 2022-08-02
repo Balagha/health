@@ -15,7 +15,7 @@ const addPatient = (req, res) =>
                 MedicalTestReport.save(createMedicalTestReport(req, patientObj)),
                 PatientMedicalCondition.save(createPatientMedicalCondition(req, patientObj))
             ]).then(([medicalTestReport, patientMedicalCondition]) => updatePatientForeignKeys(patientObj, medicalTestReport, patientMedicalCondition)))
-        .then(res.json)
+        .then(r => res.json(r))
 
 const updatePatient = (req, res) => Patient
     .findOne({where:{id: req.params.id}})
