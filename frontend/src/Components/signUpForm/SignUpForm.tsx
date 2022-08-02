@@ -1,6 +1,7 @@
 import React from 'react';
 import signup from '../../images/signupimg.png'
 import SignUpFooter from "./SignUpFooter";
+import {Link} from "react-router-dom"
 
 function SignUpForm (){
     return(
@@ -35,7 +36,8 @@ function SignUpForm (){
                                     <h1 className="p-2">
                                         <a href="/frontend/public#">Sign in as doctor</a>
                                     </h1>
-                                    <button className="bg-blue-500 px-8 text-white rounded">Sign In</button>
+                                    {/* <button className="bg-blue-500 px-8 text-white rounded">Button</button> */}
+                                    <Link to="/patientprofile" className="box-border w-[6.5rem] h-10 bg-blue-500 p-2 text-white rounded-md text-center">Submit</Link>
                                 </div>
                             </div>
                         </form>
