@@ -5,6 +5,7 @@ import {User} from "../../entity/user";
 import {createUser, createDoctor, createSpecialization, createAvailability} from "./createUtils";
 import {updateUserEntity, updateDoctorAvailabilityEntity, updateDoctorForeignKeys} from "./updateUtils";
 
+
 const relations = ["user_id", "doctor_availability_id", "doctor_specialization_id"];
 
 const addDoctor = (req, res) => User
@@ -15,7 +16,7 @@ const addDoctor = (req, res) => User
             DoctorSpecialization.save(createSpecialization(req, doctorObj)),
             DoctorAvailability.save(createAvailability(req, doctorObj))
         ]).then(([specialization, availablity]) => updateDoctorForeignKeys(doctorObj, specialization, availablity)))
-    .then(res.json);
+    .then(res.end(res));
 
 const updateDoctor = (req, res) => Doctor
     .findOne({where: {id: req.params.id}})

@@ -5,9 +5,9 @@ import {PatientMedicalCondition} from "../../entity/patient-medical-condition";
 import {Doctor} from "../../entity/doctor";
 import {DoctorSpecialization} from "../../entity/doctor-specialization";
 import {DoctorAvailability} from "../../entity/doctor-availability";
-import  _ from "lodash"
-
-const createUser = req => User.create(_.pick([
+//import _ from "lodash";
+const _ = require("lodash");
+const createUser = req => User.create(_.pick(req.body, [
     "first_name",
     "last_name",
     "blood_group",
@@ -19,7 +19,7 @@ const createUser = req => User.create(_.pick([
     "address",
     "official_id_type",
     "official_id_number"
-], req.body));
+]));
 
 const createPatient = (req,userObj) => Patient.create({
     profession: req.body.profession,
@@ -27,24 +27,24 @@ const createPatient = (req,userObj) => Patient.create({
 });
 
 const createMedicalTestReport = (req, patientObj) => MedicalTestReport.create({
-    ..._.pick([
+    ..._.pick(req.body, [
         "test_name",
         "test_type",
         "test_time",
         "test_report_delivery_time",
         "test_result",
         "comments"
-    ], req.body),
+    ]),
     patient: patientObj.id
 });
 
 const createPatientMedicalCondition = (req, patientObj) => PatientMedicalCondition.create({
-    ..._.pick([
+    ..._.pick(req.body, [
         "last_checkup_time",
         "blood_pressure",
         "weight",
         "height"
-    ], req.body),
+    ]),
     patient: patientObj.id
 });
 
@@ -59,11 +59,11 @@ const createSpecialization = (req, doctorObj) => DoctorSpecialization.create({
 });
 
 const createAvailability = (req, doctorObj) => DoctorAvailability.create({
-    ..._.pick([
+    ..._.pick(req.body, [
         "available_from",
         "available_to",
         "weekend"
-    ], req.body),
+    ]),
     doctor: doctorObj.id
 });
 
