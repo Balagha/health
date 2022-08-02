@@ -6,7 +6,7 @@ import {createUser, createDoctor, createSpecialization, createAvailability} from
 import {updateUserEntity, updateDoctorAvailabilityEntity, updateDoctorForeignKeys} from "./updateUtils";
 
 
-const relations = ["user_id", "doctor_availability_id", "doctor_specialization_id"];
+const relations = ["user", "doctor_availability", "doctor_specialization"];
 
 const addDoctor = (req, res) => User
     .save(createUser(req))
@@ -16,20 +16,20 @@ const addDoctor = (req, res) => User
             DoctorSpecialization.save(createSpecialization(req, doctorObj)),
             DoctorAvailability.save(createAvailability(req, doctorObj))
         ]).then(([specialization, availablity]) => updateDoctorForeignKeys(doctorObj, specialization, availablity)))
-    .then(res.end(res));
+    .then(r => res.json(r));
 
 const updateDoctor = (req, res) => Doctor
     .findOne({where: {id: req.params.id}})
     .then(doctor => Promise.all([updateUserEntity(req, doctor), updateDoctorAvailabilityEntity(req, doctor)]))
-    .then(res.end(res));
+    .then(r => res.json(r));
 
-const getDoctors = (req, res) => Doctor.find({relations}).then(res.json);
+const getDoctors = (req, res) => Doctor.find({relations}).then(r => res.json(r));
 
 const getDoctorById = (req, res) => Doctor
     .findOne({relations, where: {id: parseInt(req.params.id)}})
-    .then(res.json);
+    .then(r => res.json(r));
 
-const deleteDoctor = (req, res) => Doctor.delete({id: parseInt(req.params.id)}).then(res.json);
+const deleteDoctor = (req, res) => Doctor.delete({id: parseInt(req.params.id)}).then(r => res.json(r));
 
 export default {
     addDoctor,

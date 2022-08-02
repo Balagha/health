@@ -7,7 +7,7 @@ const router = Router();
 
 const validate = status => (req, res, next) => {
     const errors = validationResult(req);
-    return errors.isEmpty() ? next() : res.status(status).json({errors: errors.array()});
+    return errors.isEmpty() ? res.status(status).json({errors: errors.array()}) : next();
 }
 
 router.post('/', validation.createDoctorValidation, validate(400), doctor.addDoctor);
