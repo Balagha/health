@@ -13,7 +13,15 @@ defaults:
       run:
         working-directory: backend
 
-
+env:
+  DB_TYPE: ${{ secrets.DB_TYPE }}
+  DB_HOST: ${{ secrets.DB_HOST }}
+  DB_PORT: ${{ secrets.DB_PORT }}
+  DB_USERNAME: ${{ secrets.DB_USERNAME }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+  DB_NAME: ${{ secrets.DB_NAME }}
+  DB_SYNCHRONIZE: ${{ secrets.DB_SYNCHRONIZE }}
+  DB_LOGGING: ${{ secrets.DB_LOGGING }}
 
 jobs:
   build:
@@ -53,7 +61,6 @@ jobs:
           script: |
             curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
             sudo apt install nodejs
-            pm2 kill
             sudo npm install -g pm2
             cd /home/ubuntu
             sudo rm -rf health
@@ -61,6 +68,7 @@ jobs:
             cd /home/ubuntu/health/backend
             npm install
             npm run build
+            pm2 kill
             pm2 start npm --name health-backend -- run prod
             pm2 restart health-backend
     
