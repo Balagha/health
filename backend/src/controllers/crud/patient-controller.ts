@@ -22,7 +22,7 @@ const updatePatient = (req, res) => Patient
     .then(patient => Promise.all([updateUserEntity(req, patient), updatePatientEntity(req, patient), updateMedicalConditionEntity(req, patient)]))
     .then(r => res.json(r))
 
-const getPatients = (req, res) => Patient.find({ relations }).then(res.json);
+const getPatients = (req, res) => Patient.find({ relations }).then(r => res.json(r));
 
 const getPatientById = (req, res) => Patient
             .findOne({relations, where:{id: parseInt(req.params.id)}})
