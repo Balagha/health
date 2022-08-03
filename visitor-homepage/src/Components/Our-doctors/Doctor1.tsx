@@ -3,7 +3,7 @@ import TeamImage1 from '../../images/team-image1.jpg'
 function Doctor1(){
     return(
         <div className="px-4">
-                    <div className="rounded-md bg-[#f9f9f9]">
+                    <div className="rounded-md bg-[#f9f9f9]" data-wow-delay="1.0s">
                         <img src={TeamImage1} alt="" />
                         <h1 className="pt-5 text-3xl text-left px-6 font-bold">Miasha Nakahara</h1>
                         <p className="text-[#757575] px-6 pb-6 text-left">General Principal</p>

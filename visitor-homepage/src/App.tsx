@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Topbar from "./Components/Topbar/Topbar";
 import {BrowserRouter} from "react-router-dom";
 import Carousel from './Components/Carousel/Carousel';
-import About from './Components/About';
+import About from './Components/About/About';
 import Doctors from './Components/Our-doctors/Doctors';
 // Routes, Route
 function App() {
