@@ -64,6 +64,9 @@ jobs:
             sudo rm -rf health
             git clone https://github.com/asifjoardar/health.git
             cd /home/ubuntu/health/backend
+            export DB_TYPE=${{ env.DB_TYPE }} DB_HOST=${{ env.DB_HOST }} DB_PORT=${{ env.DB_PORT }}
+            export DB_USERNAME=${{ env.DB_USERNAME }} DB_PASSWORD=${{ env.DB_PASSWORD }} DB_NAME=${{ env.DB_NAME }}
+            export DB_SYNCHRONIZE=${{ env.DB_SYNCHRONIZE }} DB_LOGGING=${{ env.DB_LOGGING }}
             npm install
             npm run build
             pm2 kill
