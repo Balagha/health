@@ -3,25 +3,25 @@ import {Patient} from "../../entity/patient";
 import {PatientMedicalCondition} from "../../entity/patient-medical-condition";
 import {DoctorAvailability} from "../../entity/doctor-availability";
 import {Doctor} from "../../entity/doctor";
-import _ from "lodash"
+const _ = require("lodash");
 
 const updateUserEntity = (req, entity) => User.createQueryBuilder()
-    .update(_.pick(["address", "emergency_contact_number"], req.body))
+    .update(_.pick(req.body, ["address", "emergency_contact_number"]))
     .where({id: entity.user.id})
     .execute()
 
 const updatePatientEntity = (req, entity) => Patient.createQueryBuilder()
-    .update(_.pick(["profession"], req.body))
+    .update(_.pick(req.body, ["profession"]))
     .where({id: entity.id})
     .execute()
 
 const updateMedicalConditionEntity = (req, entity) => PatientMedicalCondition.createQueryBuilder()
-    .update(_.pick(["last_checkup_time", "blood_pressure", "weight", "height"], req.body))
+    .update(_.pick(req.body, ["last_checkup_time", "blood_pressure", "weight", "height"]))
     .where({id: entity.patient_medical_condition.id})
     .execute()
 
 const updateDoctorAvailabilityEntity = (req, entity) => DoctorAvailability.createQueryBuilder()
-    .update(_.pick(["available_from", "available_to", "weekend"], req.body))
+    .update(_.pick(req.body, ["available_from", "available_to", "weekend"]))
     .where({id: entity.doctor_availability.id})
     .execute()
 

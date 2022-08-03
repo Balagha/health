@@ -5,8 +5,9 @@ import {PatientMedicalCondition} from "../../entity/patient-medical-condition";
 import {Doctor} from "../../entity/doctor";
 import {DoctorSpecialization} from "../../entity/doctor-specialization";
 import {DoctorAvailability} from "../../entity/doctor-availability";
-//import _ from "lodash";
+
 const _ = require("lodash");
+
 const createUser = req => User.create(_.pick(req.body, [
     "first_name",
     "last_name",
