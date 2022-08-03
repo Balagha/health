@@ -1,13 +1,11 @@
-
 name: backend
 
 on:
   push:
     branches:
-      - aws-rds
+      - master
     paths:
       - backend/**
-
 
 defaults:
       run:
@@ -39,15 +37,6 @@ jobs:
   depoly:
     needs: [build]
     runs-on: ubuntu-latest
-    env:
-        DB_TYPE: ${{ secrets.DB_TYPE }}
-        DB_HOST: ${{ secrets.DB_HOST }}
-        DB_PORT: ${{ secrets.DB_PORT }}
-        DB_USERNAME: ${{ secrets.DB_USERNAME }}
-        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-        DB_NAME: ${{ secrets.DB_NAME }}
-        DB_SYNCHRONIZE: ${{ secrets.DB_SYNCHRONIZE }}
-        DB_LOGGING: ${{ secrets.DB_LOGGING }}
     steps:
      - name: SSH deploy
        uses: appleboy/ssh-action@master
@@ -57,19 +46,21 @@ jobs:
           key:  ${{ secrets.KEY }}
           port:  ${{ secrets.PORT }}
           script: |
-            curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-            sudo apt install nodejs
-            sudo npm install -g pm2
+            pm2 kill
+            sudo npm remove pm2 -g
+            sudo apt-get remove nodejs
+            sudo apt-get remove npm
             cd /home/ubuntu
             sudo rm -rf health
+            curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+            sudo apt install -y nodejs
+            sudo npm install -g pm2
             git clone https://github.com/asifjoardar/health.git
             cd /home/ubuntu/health/backend
-            export DB_TYPE=${{ env.DB_TYPE }} DB_HOST=${{ env.DB_HOST }} DB_PORT=${{ env.DB_PORT }}
-            export DB_USERNAME=${{ env.DB_USERNAME }} DB_PASSWORD=${{ env.DB_PASSWORD }} DB_NAME=${{ env.DB_NAME }}
-            export DB_SYNCHRONIZE=${{ env.DB_SYNCHRONIZE }} DB_LOGGING=${{ env.DB_LOGGING }}
+            export DB_TYPE=${{ secrets.DB_TYPE }} DB_HOST=${{ secrets.DB_HOST }} DB_PORT=${{ secrets.DB_PORT }}
+            export DB_USERNAME=${{ secrets.DB_USERNAME }} DB_PASSWORD=${{ secrets.DB_PASSWORD }} DB_NAME=${{ secrets.DB_NAME }}
+            export DB_SYNCHRONIZE=${{ secrets.DB_SYNCHRONIZE }} DB_LOGGING=${{ secrets.DB_LOGGING }}
             npm install
             npm run build
-            pm2 kill
             pm2 start npm --name health-backend -- run prod
             pm2 restart health-backend
-    
