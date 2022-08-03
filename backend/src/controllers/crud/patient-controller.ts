@@ -28,7 +28,7 @@ const getPatientById = (req, res) => Patient
             .findOne({relations, where:{id: parseInt(req.params.id)}})
             .then(r => res.json(r));
 
-const deletePatient = (req, res) => Patient.delete({id: parseInt(req.params.id)}).then(res.json)
+const deletePatient = (req, res) => Patient.delete({id: parseInt(req.params.id)}).then(r => res.json(r))
 
 export default {
     addPatient,
