@@ -7,8 +7,7 @@ function DesktopNav(){
                 <MobileButton/>
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                     <div className="flex-shrink-0 flex items-center">
-                    {/* <img className="block lg:hidden h-9 w-auto" src={healthIcon} alt="Workflow"/>
-                    <img className="hidden lg:block h-9 w-auto" src={healthIcon} alt="Workflow"/> */}
+
                     <a href="App" className="text-[#757575] px-3 text-4xl font-black"><i className="fa fa-h-square text-[#a5c422]"></i>EALTH</a>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
