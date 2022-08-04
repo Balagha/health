@@ -9,9 +9,9 @@ function Doctors(){
             <h1 className="text-5xl font-bold pt-7 text-[#272727]">Our Doctors</h1>
             <br />
             <div className="text-center grid grid-cols-3">
-                <Doctor3/>
-                <Doctor2/>
                 <Doctor1/>
+                <Doctor2/>
+                <Doctor3/>
             </div>
         <br /><br />
         </div>

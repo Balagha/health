@@ -4,7 +4,7 @@ function Doctor1(){
     return (
       <div className="px-4">
         <div className="rounded-md bg-[#f9f9f9]">
-          <img src="/images/team-image2.jpg.jpg" alt="" />
+          <img src="/images/team-image2.jpg" alt="" />
           <h1 className="pt-5 text-3xl text-left px-6 font-bold">
             Miasha Nakahara
           </h1>
