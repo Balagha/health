@@ -1,18 +1,12 @@
-import React from 'react';
-import Navbar from "./Components/Navbar";
-import SignUpForm from "./Components/signUpForm/SignUpForm";
-import SignInForm from "./Components/signInForm";
-import PatientProfile from "./Components/Patient-Profile/Patient-Profile";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Visitor from "./Visitor/Visitor";
+
 function App() {
   return (
     <div className="font-roboto">
         <BrowserRouter>
-            <Navbar/>
             <Routes>
-                <Route path="/signup" element={<SignUpForm/>}/>
-                <Route path="/signin" element={<SignInForm/>}/>
-                <Route path="/patientprofile" element={<PatientProfile/>}/>
+                <Route path="/" element={<Visitor/>}/>
             </Routes>
         </BrowserRouter>
     </div>
