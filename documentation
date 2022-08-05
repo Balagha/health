@@ -1,0 +1,64 @@
+# **Welcome to project National Health Service (NHS)**
+
+<p>National Health Service (NHS) aims to develop health care service in Bangladesh by embracing changes and technologies. </p>
+
+# **Table of contents**
+* Technologies
+* Backend
+* Frontend
+* Cypress
+* Miscellaneous
+* Setup
+* Licensing
+
+# **Technologies**
+* **Backend**
+  * <a href="https://nodejs.org/" target="_blank">Node.js</a>
+  * <a href="https://www.npmjs.com/" target="_blank">npm</a>
+  * <a href="https://expressjs.com/" target="_blank">Express</a>
+  * <a href="https://www.typescriptlang.org/" target="_blank">Typescript</a>
+  * <a href="https://typeorm.io/" target="_blank">Typeorm</a>
+  <p> 
+
+
+  </p>
+
+* **Frontend**
+  * <a href="https://reactjs.org/" target="_blank">ReactJS</a>
+  * <a href="https://tailwindcss.com/" target="_blank">Tailwindcss</a>
+  * <a href="https://mui.com/" target="_blank">Material UI</a>
+  * <a href="https://tailwindcss.com/docs/flex-basis" target="_blank">Flex</a>
+
+
+# **Setup**
+## **Backend**
+<p>To run this project, install it loaclly then:</p>
+
+
+1. ```bash 
+   git clone https://github.com/asifjoardar/health.git
+   ```
+
+2. ```bash 
+   cd backend
+   ```
+
+3. ```bash
+   cp .env.example .env
+
+   //Configure your .env file as your database
+    ```
+
+4. ```bash 
+   npm i
+   ``` 
+  
+5. ```bash 
+   npm start 
+   ```
+
+
+# **Licensing**
+<p>Licensed under the <a href="https://github.com/asifjoardar/health/blob/master/LICENSE" target="_blank"> Apache License 2.0</a></p>
+
+
