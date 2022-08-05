@@ -19,7 +19,7 @@ const addDoctor = (req, res) => User
     .then(r => res.json(r));
 
 const updateDoctor = (req, res) => Doctor
-    .findOne({where: {id: req.params.id}})
+    .findOne({relations, where: {id: req.params.id}})
     .then(doctor => Promise.all([updateUserEntity(req, doctor), updateDoctorAvailabilityEntity(req, doctor)]))
     .then(r => res.json(r));
 

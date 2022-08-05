@@ -39,16 +39,16 @@ const createMedicalTestReport = (req, patientObj) => MedicalTestReport.create({
     patient: patientObj.id
 });
 
-const createPatientMedicalCondition = (req, patientObj) => PatientMedicalCondition.create({
-    ..._.pick(req.body, [
-        "last_checkup_time",
-        "blood_pressure",
-        "weight",
-        "height"
-    ]),
-    patient: patientObj.id
-});
-
+const createPatientMedicalCondition = (req, patientObj) =>
+    PatientMedicalCondition.create({
+        ..._.pick(req.body, [
+            "last_checkup_time",
+            "blood_pressure",
+            "weight",
+            "height"
+        ]),
+        patient: patientObj.id
+    });
 const createDoctor = (req,userObj) => Doctor.create({
     govt_reg_no: req.body.govt_reg_no,
     user: userObj.id

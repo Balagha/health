@@ -8,7 +8,7 @@ import {Doctor} from "../entity/doctor";
 
 const validate = status => (req, res, next) => {
     const errors = validationResult(req);
-    return errors.isEmpty() ? res.status(status).json({errors: errors.array()}) : next();
+    return errors.isEmpty() ? next() : res.status(status).json({errors: errors.array()});
 }
 
 const router = Router();

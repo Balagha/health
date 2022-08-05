@@ -67,9 +67,7 @@ const createPatientValidation = [
 
 const idValidation = param('id').exists().toInt().custom(id => Patient
     .findOne({where: {id}})
-    .then(id => id && Promise.reject('Doctor id is not found.')));
-
-const idValidationList = [idValidation];
+    .then(id => !id && Promise.reject('Patient id is not found.')));
 
 const updatePatientValidation = [
     check(unCommonProperty).isEmpty(),
@@ -79,5 +77,5 @@ const updatePatientValidation = [
 export default {
     createPatientValidation,
     updatePatientValidation,
-    idValidationList
+    idValidation
 };

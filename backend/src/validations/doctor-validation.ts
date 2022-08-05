@@ -22,8 +22,8 @@ const sampleReqBody = {
 }
 
 const checkUnique = (entity, field, prefix) => value => entity
-        .findOne({where: {[field]: value}})
-        .then(obj => obj && Promise.reject(`${prefix} already in use`));
+    .findOne({where: {[field]: value}})
+    .then(obj => obj && Promise.reject(`${prefix} already in use`));
 
 const commonProperty = [
     'address',
@@ -58,17 +58,15 @@ const createDoctorValidation = [
 
 const idValidation = param('id').exists().toInt().custom(id => Doctor
     .findOne({where: {id}})
-    .then(id => id && Promise.reject('Doctor id is not found.')));
-
-const idValidationList = [idValidation];
+    .then(id => !id && Promise.reject('Doctor id is not found.')));
 
 const updateDoctorValidation = [
     check(unCommonProperty).isEmpty(),
-    commonChecks
+    commonChecks,
 ];
 
 export default {
     createDoctorValidation,
     updateDoctorValidation,
-    idValidationList
+    idValidation
 };

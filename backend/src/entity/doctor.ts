@@ -11,15 +11,15 @@ export class Doctor extends BaseEntity{
     @Column()
     govt_reg_no: string
 
-    @OneToOne(() => User, (user_info) => user_info.id, { onDelete: "CASCADE"})
+    @OneToOne(() => User, (user_info) => user_info.id, { cascade: true })
     @JoinColumn()
     user: User
 
-    @OneToOne(() => DoctorAvailability, doctorAvailability => doctorAvailability.id)
+    @OneToOne(() => DoctorAvailability, doctorAvailability => doctorAvailability.id, {cascade: true})
     @JoinColumn()
     doctor_availability: DoctorAvailability
 
-    @OneToOne(() => DoctorSpecialization, doctorSpecialization => doctorSpecialization.id)
+    @OneToOne(() => DoctorSpecialization, doctorSpecialization => doctorSpecialization.id, {cascade: true})
     @JoinColumn()
     doctor_specialization: DoctorSpecialization
 }

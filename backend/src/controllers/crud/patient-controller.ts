@@ -5,7 +5,7 @@ import {PatientMedicalCondition} from "../../entity/patient-medical-condition";
 import {updateUserEntity, updatePatientEntity, updateMedicalConditionEntity, updatePatientForeignKeys} from "./updateUtils";
 import {MedicalTestReport} from "../../entity/medical-test-report";
 
-const relations = ["user_id", "Patient_medical_condition_id", "medical_test_report_id"];
+const relations = ["user", "patient_medical_condition", "medical_test_report"];
 
 const addPatient = (req, res) =>
     User.save(createUser(req))
@@ -15,10 +15,10 @@ const addPatient = (req, res) =>
                 MedicalTestReport.save(createMedicalTestReport(req, patientObj)),
                 PatientMedicalCondition.save(createPatientMedicalCondition(req, patientObj))
             ]).then(([medicalTestReport, patientMedicalCondition]) => updatePatientForeignKeys(patientObj, medicalTestReport, patientMedicalCondition)))
-        .then(r => res.json(r))
+        .then(r => res.json(req.body))
 
 const updatePatient = (req, res) => Patient
-    .findOne({where:{id: req.params.id}})
+    .findOne({relations, where:{id: req.params.id}})
     .then(patient => Promise.all([updateUserEntity(req, patient), updatePatientEntity(req, patient), updateMedicalConditionEntity(req, patient)]))
     .then(r => res.json(r))
 

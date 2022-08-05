@@ -7,16 +7,16 @@ const router = Router();
 
 const validate = status => (req, res, next) => {
     const errors = validationResult(req);
-    return errors.isEmpty() ? res.status(status).json({errors: errors.array()}) : next();
+    return errors.isEmpty() ? next() : res.status(status).json({errors: errors.array()});
 }
 
 router.post('/',validation.createPatientValidation , validate(400), patient.addPatient);
 router.get('/', patient.getPatients);
-router.get('/:id', validation.idValidationList, validate(404), patient.getPatientById);
+router.get('/:id', validation.idValidation, validate(404), patient.getPatientById);
 router.put('/:id',
-    validation.idValidationList, validate(404),
+    validation.idValidation, validate(404),
     validation.updatePatientValidation , validate(400),
     patient.updatePatient);
-router.delete('/:id', validation.idValidationList, validate(404), patient.deletePatient);
+router.delete('/:id', validation.idValidation, validate(404), patient.deletePatient);
 
 export default router;

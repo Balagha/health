@@ -3,6 +3,7 @@ import {Patient} from "../../entity/patient";
 import {PatientMedicalCondition} from "../../entity/patient-medical-condition";
 import {DoctorAvailability} from "../../entity/doctor-availability";
 import {Doctor} from "../../entity/doctor";
+
 const _ = require("lodash");
 
 const updateUserEntity = (req, entity) => User.createQueryBuilder()
