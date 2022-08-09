@@ -7,6 +7,7 @@ import Infos from "./Components/LatestNews";
 import Appointment from "./Components/Appointment";
 import Map from "./Components/Showmap";
 import End from "./Components/End";
+import Footer from "./Components/Footer/Footer";
 
 function Visitor() {
   return (
@@ -20,6 +21,7 @@ function Visitor() {
       <Appointment/>
       <Map/>
       <End/>
+      <Footer/>
     </div>
   );
 }
