@@ -1,10 +1,7 @@
 function Footer(){
     return(
-        <div className="mb-[3rem] mt-[1rem]">
-            <div className="w-[75rem] mb-[2rem]">
-                <hr/>
-            </div>
-            <div className="hidden sm:block sm:ml-6 mb-[4rem]">
+        <div className="mb-[6rem] mt-[1rem]">
+            <div className="hidden sm:block sm:ml-6 mb-[2rem]">
                     <div className="absolute left-[4rem] flex space-x-4">
 
                         <text className="px-3 py-2 text-sm text-[#757575] mr-[4rem] font-bold">Copyright © 2018 Your Company | Design: Tooplate</text>
