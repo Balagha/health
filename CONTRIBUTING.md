@@ -1,0 +1,15 @@
+## Steps
+- Create a fork
+- Create/Pick a ticket on/from the Projects board - https://github.com/users/asifjoardar/projects/1
+- Create a new branch with the branch name in the following pattern - {feature|bug-fix|refactor|doc}/{2,3-word-description}
+- Solve the ticket
+- Follow the architectural guidelines mentioned in each individual part, i.e. - backend, frontend, cypress, misc
+- Submit a Pull Request
+- Squash your PR into a single commit
+- The commit message should contain the issue id and a short description of the problem, e.g. - #4 Add Signup UI
+- The commit message should not contain more than 50 characters
+- A single PR must not touch on more than 10 files, except under extreme circumstances
+- Ensure all automated tests pass
+- Fix all merge conflicts
+- Add @wpxmunna as the reviewer
+- Wait until merged and rejoice when it does!
