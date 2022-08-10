@@ -10,10 +10,10 @@ function TopNavigator() {
                     <a href="null" id="menu_toggle"><i className="fa fa-bars"></i></a>
                 </div>
                 <nav className="nav navbar-nav">
-                    <ul className="navbar-right">
+                    <ul className="navbar-right style">
                         <li className="nav-item dropdown open" style={{paddingLeft: 15}}>
-                            <a href="/javascripts" className="user-profile dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                <img src="images/img.jpg" alt=""/>John Doe
+                            <a href=" " className="user-profile dropdown-toggle flex items-center"  id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                <img src="/images/img.jpg" alt="" className=""/>John Doe
                             </a>
                             <div className="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                                 <a className="dropdown-item"  href="/javascripts"> Profile</a>
