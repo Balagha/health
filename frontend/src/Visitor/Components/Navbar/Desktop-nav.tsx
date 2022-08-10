@@ -23,6 +23,7 @@ function DesktopNav(){
                         <a href="/#" className="text-#393939-300 hover:bg-[#a5c422] hover:text-white px-3 py-2 rounded-md text-sm font-medium">News</a>
 
                         <a href="/#" className="text-#393939-300 hover:bg-[#a5c422] hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        <a href="/dashboard" className="text-#393939-300 hover:bg-[#a5c422] hover:text-white px-3 py-2 rounded-md text-sm font-medium">DashBoard</a>
 
                         <button type="button" className="bg-[#a5c422] p-2 rounded-md text-white hover:text-white hover:bg-[#4267b2]">
                             <a href="/#" className=" px-3 py-2 text-sm font-bold">Make an appointment</a>

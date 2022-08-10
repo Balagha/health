@@ -3,6 +3,11 @@ import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import Doctors from "./Components/Doctors";
 import Topbar from "./Components/Topbar";
+import Infos from "./Components/LatestNews";
+import Appointment from "./Components/Appointment";
+import Map from "./Components/Showmap";
+import End from "./Components/End";
+import Footer from "./Components/Footer/Footer";
 
 function Visitor() {
   return (
@@ -12,6 +17,11 @@ function Visitor() {
       <Carousel/>
       <About/>
       <Doctors/>
+      <Infos/>
+      <Appointment/>
+      <Map/>
+      <End/>
+      <Footer/>
     </div>
   );
 }

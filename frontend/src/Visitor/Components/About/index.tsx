@@ -19,7 +19,6 @@ function About() {
                         <div>
                             <h3 className="text-2xl left-0 text-[#333333] font-bold">Dr. Neil Jackson</h3>
                             <p>General Principal</p>
-                            k
                         </div>
                     </div>
                 </div>
