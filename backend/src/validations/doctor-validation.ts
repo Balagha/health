@@ -51,9 +51,19 @@ const unCommonChecks = check(unCommonProperty).notEmpty();
 const createDoctorValidation = [
     commonChecks,
     unCommonChecks,
-    check('email').normalizeEmail().isEmail().custom(checkUnique(User, 'email', 'Email Address')),
-    check('contact_number').isLength({min: 11}).custom(checkUnique(User, 'contact_number', 'Contact Number')),
-    check('govt_reg_no').custom(checkUnique(Doctor, 'govt_reg_no', 'Government Registration Number')),
+    check('email')
+        .normalizeEmail()
+        .isEmail()
+        .custom(checkUnique(User, 'email', 'Email Address')),
+    check('contact_number')
+        .isLength({min: 11, max:11})
+        .matches(/^\d+$/).withMessage('Contact number can not contain character.')
+        .custom(checkUnique(User, 'contact_number', 'Contact Number')),
+    check('emergency_contact_number')
+        .isLength({min: 11, max:11})
+        .matches(/^\d+$/).withMessage('Emergency contact number can not contain character.'),
+    check('govt_reg_no')
+        .custom(checkUnique(Doctor, 'govt_reg_no', 'Government Registration Number')),
 ];
 
 const idValidation = param('id').exists().toInt().custom(id => Doctor
