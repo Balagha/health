@@ -1,4 +1,5 @@
 import React from "react";
+import NetworkActivities from "./networkActivities";
 
 
 export default function TopTiles(){
@@ -42,7 +43,9 @@ export default function TopTiles(){
                     </div>
                 </div>
                  {/*top tiles*/}
+                <NetworkActivities/>
         </div>
+
         </div>
 
     );
