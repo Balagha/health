@@ -2,7 +2,7 @@ import Doctor from "./Doctor";
 
 function Doctors(){
     return(
-        <div className="max-w-7xl mx-auto pt-[90px] mb-20 px-2 sm:px-6 lg:px-2">
+        <div className="max-w-7xl mx-auto pt-[91px] mb-20 px-2 sm:px-6 lg:px-2">
             <h1 className="text-center text-5xl pb-10 font-bold pt-7 text-[#272727]">Our Doctors</h1>
 
             <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 ">
