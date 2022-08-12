@@ -1,8 +1,8 @@
 import Form from "./Form";
 function Appointment(){
     return(
-        <div className="max-w-7xl mx-auto mt-[4rem] text-center grid grid-cols-2 gap-0">
-            <img className="mt-[2rem] ml-[3rem] h-[40rem] w-[36rem]" src="/images/appointment-image.jpg" alt="" />
+        <div className="max-w-7xl mx-auto mt-[4rem] text-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-0">
+            <img className="" src="/images/appointment-image.jpg" alt="" />
             <Form/>    
         </div>
     )

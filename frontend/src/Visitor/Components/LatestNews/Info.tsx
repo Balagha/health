@@ -10,9 +10,7 @@ function Info(props: Infoprops){
     return(
         <div className="px-4">
                     <div className="rounded-md bg-[white]" data-wow-delay="1.0s">
-                        <a href="/#">
                             <img className="h-[250px] w-[410px]" src={props.image} alt="" />
-                        </a>
                         <p className="mt-[1rem] text-[#757575] px-6 text-left">{props.date}</p>
                         <a href="/#">
                             <h1 className="text-3xl text-left px-6 font-black">{props.title}</h1>

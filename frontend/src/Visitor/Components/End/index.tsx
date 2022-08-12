@@ -5,12 +5,12 @@ import Opening from "./Opening";
 function End(){
     return(
         <div className="max-w-7xl mx-auto">
-            <div className="mt-[6rem] mr-[3rem] ml-[3rem] mr-[2rem] grid grid-cols-3 gap-4 flex">
+            <div className="mt-20 sm:px-0 px-4 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 flex">
                 <Contact/>
                 <Latest/>
                 <Opening/>
             </div>
-            <p><hr/></p>
+            <div className="pb-5"></div>
         </div>
     )
 }
