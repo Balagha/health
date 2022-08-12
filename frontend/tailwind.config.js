@@ -6,7 +6,9 @@ module.exports = {
       colors:{
         backgoround: "#F5F5F5",
         iconBg: "#4C80C2",
-        signUpBg: "#258AFF"
+        signUpBg: "#258AFF",
+        Green:"#70bf44",
+        light:"90EE90"
       },
       screens:{
         'desktop': '1280px'

@@ -6,7 +6,7 @@ export default function FormExtra(){
             id="remember-me"
             name="remember-me"
             type="checkbox"
-            className="h-4 w-4 text-purple-600 focus:ring-sky-500 border-gray-300 rounded"
+            className="h-4 w-4 text-green-500 focus:ring-green border-gray-300 rounded"
           />
           <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
             Remember me
@@ -14,7 +14,7 @@ export default function FormExtra(){
         </div>
 
         <div className="text-sm">
-          <a href="#" className="font-medium text-sky-600 hover:text-sky-500">
+          <a href="#" className="font-bold text-green-600 hover:text-green-500">
             Forgot your password?
           </a>
         </div>

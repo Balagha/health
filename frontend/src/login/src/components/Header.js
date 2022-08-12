@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
-import Logo from '../image/logo.gif'
+import logo from '../image/logo.gif';
+
 export default function Header({
     heading,
     paragraph,
@@ -7,19 +8,19 @@ export default function Header({
     linkUrl="#"
 }){
     return(
-        <div className="mb-5">
-            <div className="flex justify-center -pt-10 ">
+        <div className="mb-10">
+            <div className="flex justify-center">
                 <img 
                     alt=""
-                    className=" w-50%"
-                    src= {Logo} />
+                    className="width 40%"
+                    src={logo}/>
             </div>
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            <h2 className="mt-0 text-center text-3xl font-extrabold text-gray-900">
                 {heading}
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600 mt-5">
             {paragraph} {' '}
-            <Link to={linkUrl} className="font-medium text-sky-600 hover:text-sky-500">
+            <Link to={linkUrl} className="font-bold text-Green hover:text-light">
                 {linkName}
             </Link>
             </p>

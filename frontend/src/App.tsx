@@ -1,9 +1,11 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Visitor from "./Visitor/Visitor";
 import DashBoardMainSection from "./dashBoard/Components/dashBoardMain";
-import Login from './login/src/components/Login';
-import Signup from './login/src/components/Signup';
-import SignupPage from './login/src/pages/Signup';
+import LoginPage from './login/src/pages/Login';
+import SignupPage from './login/src/pages/signup';
+
+
+
 
 function App() {
   return (
@@ -12,8 +14,10 @@ function App() {
             <Routes>
                 <Route path="/" element={<Visitor/>}/>
                 <Route path="/dashboard" element={<DashBoardMainSection/>}/>
-                <Route path="/Login" element={<Login/>}/>
-                <Route path="/signup" element={<Signup/>}/>
+                <Route path="/Login" element={<LoginPage/>}/>
+                <Route path="/signup" element={<SignupPage/>}/>
+                
+
             </Routes>
         </BrowserRouter>
     </div>
