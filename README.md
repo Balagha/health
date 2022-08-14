@@ -27,14 +27,14 @@ An open source health care web app
 ## Backend
 
 - [Architecture](backend/ARCHITECTURE.md)
-- [Deployment Guidelines](backend/README.md)
-- [Tech-Stack](backend/README.md)
+- [Deployment Guidelines](backend/README.md#deployment)
+- [Tech-Stack](backend/README.md#technologies)
 
 ## Frontend
 
 - [Architecture](frontend/ARCHITECTURE.md)
-- [Deployment Guidelines](frontend/README.md)
-- [Tech-Stack](frontend/README.md)
+- [Deployment Guidelines](frontend/README.md#deployment)
+- [Tech-Stack](frontend/README.md#technologies)
 
 ## Testing
 
