@@ -67,7 +67,7 @@
 </p>
 
 <p>Go to your GitHub repository. Under Settings/Secrets, add Secrets as mentioned on the .csv file. Name them as AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.</p>
-<p>At the root of your project, create .github/workflow directories. Then, create .yml file. You can name it as you want. we set it as <a href=" https://github.com/asifjoardar/health/blob/master/.github/workflows/frontend.yml">frontend.yml</a>.</p>
+<p>At the root of your project, create .github/workflow directories. Then, create .yml file. You can name it as you want. we set it as <a href="https://github.com/asifjoardar/health/blob/master/.github/workflows/frontend.yml">frontend.yml</a> .</p>
 
 # **Licensing**
 <p>
