@@ -10,12 +10,12 @@ function DesktopNav(){
                     {/* <img className="block lg:hidden h-8 w-auto" src="logo.svg" alt="Workflow"/>
                     <img className="hidden lg:block h-9 w-auto" src="logo.svg" alt="Workflow"/> */}
                     <img src="/images/H.png" className="online-block h-10" alt="" />
-                    <a href="App" className="text-[#757575] text-4xl font-black">EALTH</a>
+                    <a href="/" className="text-[#757575] text-4xl font-black">EALTH</a>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
                     <div className=" absolute right-0 flex space-x-4">
 
-                        <a href="Slider" className="text-#393939-300 hover:bg-[#a5c422] hover:text-white px-3 py-2 rounded-md text-sm font-medium"aria-current="page">Home</a>
+                        <a href="/#" className="text-#393939-300 hover:bg-[#a5c422] hover:text-white px-3 py-2 rounded-md text-sm font-medium"aria-current="page">Home</a>
 
                         <a href="/#" className="text-#393939-300 hover:bg-[#a5c422] hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Us</a>
 

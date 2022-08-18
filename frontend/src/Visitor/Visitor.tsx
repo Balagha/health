@@ -8,22 +8,20 @@ import Appointment from "./Components/Appointment";
 import Map from "./Components/Showmap";
 import End from "./Components/End";
 import Footer from "./Components/Footer/Footer";
-import SearchDoctor from "./Components/SearchDoctor/searchDoctor";
 
 function Visitor() {
   return (
-    <div className="font-roboto"> 
-      <Topbar/>
-      <Navbar/>
-      <Carousel/>
-      <SearchDoctor/>
-      <About/>
-      <Doctors/>
-      <Infos/>
-      <Appointment/>
-      <Map/>
-      <End/>
-      <Footer/>
+    <div className="font-roboto">
+      <Topbar />
+      <Navbar />
+      <Carousel />
+      <About />
+      <Doctors />
+      <Infos />
+      <Appointment />
+      <Map />
+      <End />
+      <Footer />
     </div>
   );
 }
