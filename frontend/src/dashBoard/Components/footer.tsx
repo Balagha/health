@@ -5,12 +5,12 @@ function Footer() {
     <>
       <footer>
         <div className="pull-right">
-          Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          Copyright © 2022 | National Health Service
         </div>
         <div className="clearfix"></div>
       </footer>
     </>
-  )
+  );
 }
 
 export default Footer
