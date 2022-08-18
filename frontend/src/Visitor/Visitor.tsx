@@ -8,6 +8,7 @@ import Appointment from "./Components/Appointment";
 import Map from "./Components/Showmap";
 import End from "./Components/End";
 import Footer from "./Components/Footer/Footer";
+import SearchDoctor from "./Components/SearchDoctor/searchDoctor";
 
 function Visitor() {
   return (
@@ -15,6 +16,7 @@ function Visitor() {
       <Topbar/>
       <Navbar/>
       <Carousel/>
+      <SearchDoctor/>
       <About/>
       <Doctors/>
       <Infos/>
