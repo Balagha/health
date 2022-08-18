@@ -4,6 +4,7 @@ import DashBoardMainSection from "./dashBoard/Components/dashBoardMain";
 import SignupPage from "./login/pages/Signup";
 import LoginPage from "./login/pages/Login";
 import Table from "./dashBoard/Components/table";
+import DoctorsCardMain from "./DoctorsCard/Components/doctorsCardMain";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/dashboard/components" element={<Table />} />
+          <Route path="/doctors" element={<DoctorsCardMain/>} />
         </Routes>
       </BrowserRouter>
     </div>
