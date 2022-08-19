@@ -5,6 +5,7 @@ import SignupPage from "./login/pages/Signup";
 import LoginPage from "./login/pages/Login";
 import Table from "./dashBoard/Components/table";
 import DoctorsCardMain from "./DoctorsCard/Components/doctorsCardMain";
+import DoctorProfile from "./Visitor/Components/Doctor-Profile/Doctor-Profile";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Visitor />} />
+          <Route path="/doctor-profile" element={<DoctorProfile/>} />
           <Route path="/dashboard" element={<DashBoardMainSection />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
