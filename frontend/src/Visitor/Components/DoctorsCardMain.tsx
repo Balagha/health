@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from "../../Visitor/Components/Navbar";
-import Topbar from "../../Visitor/Components/Topbar";
-import DoctorsRating from "./doctorsRating";
+import Navbar from "./Navbar";
+import Topbar from "./Topbar";
+import DoctorsRating from "./DoctorsRating";
 
 function DoctorsCardMain() {
     return (
@@ -22,14 +22,14 @@ function DoctorsCardMain() {
                         <div className="flex flex-col px-5 pb-5">
                             <div className="flex flex-row">
                                 <div>
-                                    <a href="#">
+                                    <a href="src/Visitor/Components/doctorsCardMain#">
                                         <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">DR. Munna Bhai</h5>
                                     </a>
                                     <DoctorsRating/>
                                 </div>
                             </div>
                             <div className="flex justify-between items-center">
-                                <a href="#"
+                                <a href="src/Visitor/Components/doctorsCardMain#"
                                    className="text-white bg-[#A5C52C] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get Appoinment
                                 </a>
                             </div>

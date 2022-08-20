@@ -3996,7 +3996,7 @@ ul.project_files li a i {
   font-size: 35px; }
 
 /* *********  /ecommerce  **************************** */
-/** login **/
+/** Auth **/
 .login {
   background: #F7F7F7; }
 
@@ -4054,7 +4054,7 @@ a.hiddenanchor {
   animation-timing-function: ease;
   animation-fill-mode: both; }
 
-/** /login **/
+/** /Auth **/
 /** signup **/
 .login_box {
   padding: 20px;

@@ -1,5 +1,5 @@
 import End from "../End";
-import Footer from "../Footer/Footer";
+import Footer from "../Footer";
 import Navbar from "../Navbar";
 import Topbar from "../Topbar";
 import ResponsiveDateTimePickers from "./Calendar";
