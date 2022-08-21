@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import DiseaseDropdown from "./diseaseDropdown";
 
 function SearchDoctor() {
+
+  const  diseaseList = ['Heart','kidny','Lungs'];
   const navigate = useNavigate();
   return (
     <div className="flex flex-col justify-center items-center w-full h-80 rounded-xl">
@@ -13,7 +15,7 @@ function SearchDoctor() {
       </div>
 
       <div className="flex justify-center">
-        <DiseaseDropdown />
+        <DiseaseDropdown dropDownData = {diseaseList}/>
         <div className="mb-3 xl:w-96 mt-1">
           <div className="input-group relative flex items-stretch w-full mb-4">
             <input
