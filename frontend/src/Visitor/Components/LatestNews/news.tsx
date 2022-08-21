@@ -6,7 +6,7 @@ interface Infoprops {
     name: string;
     designation: string;
   }
-function Info(props: Infoprops){
+function News(props: Infoprops){
     return(
         <div className="px-4">
                     <div className="rounded-md bg-[white]" data-wow-delay="1.0s">
@@ -30,4 +30,4 @@ function Info(props: Infoprops){
                 </div>
     )
 }
-export default Info;
+export default News;

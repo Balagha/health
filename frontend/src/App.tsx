@@ -8,9 +8,9 @@ function App() {
     <div className="font-roboto">
       <BrowserRouter>
         <Routes>
-          <Route path="/auth" element={<Auth/>} />
+          <Route path="/auth/*" element={<Auth/>} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/" element={<Visitor />} />
+          <Route path="/*" element={<Visitor />} />
         </Routes>
       </BrowserRouter>
     </div>

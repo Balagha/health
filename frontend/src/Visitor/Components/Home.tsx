@@ -3,11 +3,10 @@ import About from "./About";
 import Navbar from "./Navbar";
 import Doctors from "./Doctors";
 import Topbar from "./Topbar";
-import Infos from "./LatestNews";
+import LatestNews from "./LatestNews";
 import Appointment from "./Appointment";
 import Showmap from "./Showmap";
-import End from "./End";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 function Home() {
   return (
@@ -17,10 +16,9 @@ function Home() {
       <Carousel />
       <About />
       <Doctors />
-      <Infos />
+      <LatestNews />
       <Appointment />
       <Showmap />
-      <End />
       <Footer />
     </div>
   );

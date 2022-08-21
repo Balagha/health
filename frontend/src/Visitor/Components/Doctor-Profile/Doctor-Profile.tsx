@@ -1,5 +1,4 @@
-import End from "../End";
-import Footer from "../Footer";
+import Footer from "../footer";
 import Navbar from "../Navbar";
 import Topbar from "../Topbar";
 import ResponsiveDateTimePickers from "./Calendar";
@@ -26,9 +25,8 @@ function DoctorProfile (){
                 <br/>
             </div>
             <div className="mt-[92%]">
-            <End/>
+            <Footer/>
             </div>
-            <Footer/> 
         </div>
     )
 }
