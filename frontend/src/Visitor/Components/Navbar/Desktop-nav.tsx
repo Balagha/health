@@ -1,16 +1,27 @@
-// import MobileButton from "./Mobile-Button";
+import MobileButton from "./Mobile-Button";
 
 function DesktopNav() {
   return (
     <nav>
-      <div className="w-full flex justify-between p-2 items-center">
+      <div className="relative w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-between p-2 items-center h-16">
+        <MobileButton></MobileButton>
         <div className="flex-shrink-0 flex items-center">
+          {/* <img
+            className="block lg:hidden h-8 w-auto"
+            src="logo.svg"
+            alt="Workflow"
+          />
+          <img
+            className="hidden lg:block h-9 w-auto"
+            src="logo.svg"
+            alt="Workflow"
+          /> */}
           <img src="/images/H.png" className="online-block h-10" alt="" />
           <a href="/" className="text-[#757575] text-4xl font-black">
             EALTH
           </a>
         </div>
-        <div className="hidden md:flex sm:block  gap-2 p-2">
+        <div className="hidden lg:flex md:block  gap-1 p-2">
           <a
             href="/#"
             className="text-#393939-300 hover:bg-[#a5c422] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -49,14 +60,14 @@ function DesktopNav() {
 
           <a
             href="/dashboard"
-            className="text-#393939-300 hover:bg-[#a5c422] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            className="text-#393939-300 hover:bg-[#a5c422] hover:text-white px-3 py-2  rounded-md text-sm font-medium"
           >
             DashBoard
           </a>
 
           <button
             type="button"
-            className="bg-[#a5c422] p-2 rounded-md text-white hover:text-white hover:bg-[#4267b2]"
+            className="bg-[#a5c422] p-1 rounded-md text-white hover:text-white hover:bg-[#4267b2]"
           >
             <a href="/#" className=" px-3 py-2 text-sm font-bold">
               Make an appointment
