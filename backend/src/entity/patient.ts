@@ -2,6 +2,7 @@ import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, OneToMany,
 import {User} from "./user";
 import {PatientMedicalCondition} from "./patient-medical-condition";
 import {MedicalTestReport} from "./medical-test-report";
+import {Appointment} from "./appoinment";
 
 @Entity()
 export class Patient extends BaseEntity{
@@ -22,4 +23,8 @@ export class Patient extends BaseEntity{
     @OneToOne(() => PatientMedicalCondition, patientMedicalCondition => patientMedicalCondition.id)
     @JoinColumn()
     patient_medical_condition: PatientMedicalCondition
+
+    @OneToMany(() => Appointment, appointment => appointment.id)
+    @JoinColumn()
+    appointment: Appointment[]
 }
