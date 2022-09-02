@@ -1,7 +1,9 @@
-import {Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, BaseEntity} from "typeorm";
+import {BaseEntity, Column, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn} from "typeorm";
 import {User} from "./user";
 import {DoctorAvailability} from "./doctor-availability";
 import {DoctorSpecialization} from "./doctor-specialization";
+import {Slot} from "./slot"
+import {Appointment} from "./appoinment";
 
 @Entity()
 export class Doctor extends BaseEntity{
@@ -19,7 +21,18 @@ export class Doctor extends BaseEntity{
     @JoinColumn()
     doctor_availability: DoctorAvailability
 
+    @OneToMany(() => Slot, slot => slot.doctor, {cascade: true})
+    @JoinColumn()
+    slot: Slot[]
+
     @OneToOne(() => DoctorSpecialization, doctorSpecialization => doctorSpecialization.id, {cascade: true})
     @JoinColumn()
     doctor_specialization: DoctorSpecialization
+
+    @OneToMany(() => Appointment, appointment => appointment.id, {cascade: true})
+    @JoinColumn()
+    appointment: Appointment[]
+
+
+
 }

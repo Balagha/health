@@ -8,7 +8,10 @@ import {Prescription} from "./entity/prescription"
 import {PatientMedicalCondition} from "./entity/patient-medical-condition";
 import {MedicalTestReport} from "./entity/medical-test-report";
 import {DoctorAvailability} from "./entity/doctor-availability";
+import {Slot} from "./entity/slot";
+import {Appointment} from "./entity/appoinment";
 import 'dotenv/config'
+
 export const AppDataSource = new DataSource({
     type: process.env.DB_TYPE as any,
     host: process.env.DB_HOST as any,
@@ -26,7 +29,9 @@ export const AppDataSource = new DataSource({
         Prescription,
         PatientMedicalCondition,
         MedicalTestReport,
-        DoctorAvailability
+        DoctorAvailability,
+        Slot,
+        Appointment
     ],
     subscribers: [],
     migrations: [],
