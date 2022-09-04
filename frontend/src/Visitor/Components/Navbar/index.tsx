@@ -5,7 +5,6 @@ function Navbar() {
   return (
     <div>
       <DesktopNav />
-      {/* <MobileNav/> */}
     </div>
   );
 }

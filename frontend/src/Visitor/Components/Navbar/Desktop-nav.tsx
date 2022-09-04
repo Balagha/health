@@ -1,6 +1,4 @@
 import { useState } from "react";
-import MobileButton from "./Mobile-Button";
-import useOpen from "./useOpen";
 
 function DesktopNav() {
   const [isOpen, setIsOpen] = useState(false);

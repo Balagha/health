@@ -1,6 +1,3 @@
-import { useState } from "react";
-import useOpen from "./useOpen";
-
 function MobileButton() {
   // const [isOpen, setIsOpen] = useState(false);
   return (
