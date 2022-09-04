@@ -29,6 +29,8 @@ export default function Signup(){
         <div className="">
         {
                 fields.map(field=>
+                    <>
+                        <h1 className="font-semibold">{field.labelText}</h1>
                         <Input
                             key={field.id}
                             handleChange={handleChange}
@@ -40,7 +42,8 @@ export default function Signup(){
                             type={field.type}
                             isRequired={field.isRequired}
                             placeholder={field.placeholder}
-                    />
+                        />
+                    </>
                 
                 )
             }
