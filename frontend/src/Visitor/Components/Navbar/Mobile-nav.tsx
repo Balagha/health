@@ -1,8 +1,6 @@
-import MobileButton from "./Mobile-Button";
-
 function MobileNav() {
   return (
-    <div className="md:hidden" id="mobile-menu">
+    <div className="sm:hidden" id="mobile-menu">
       <ul className="flex flex-col gap-2 p-2">
         <li>
           <a
