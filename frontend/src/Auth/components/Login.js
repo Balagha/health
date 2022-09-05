@@ -40,7 +40,7 @@ export default function Login(){
                             name={field.name}
                             type={field.type}
                             isRequired={field.isRequired}
-                            placeholder={field.placeholder}
+                            placeholder={field.placeHolder}
                     />
                 
                 )

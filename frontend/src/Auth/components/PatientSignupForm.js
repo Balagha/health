@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { signupFields } from "../constants/formFields"
+import { patientSignupFields } from "../constants/formFields"
 import FormAction from "./FormAction";
 import Input from "./Input";
 
-const fields=signupFields;
+const fields=patientSignupFields;
 let fieldsState={};
 
 fields.forEach(field => fieldsState[field.id]='');
 
-export default function Signup(){
+export default function PatientSignupForm(){
   const [signupState,setSignupState]=useState(fieldsState);
 
   const handleChange=(e)=>setSignupState({...signupState,[e.target.id]:e.target.value});
@@ -19,7 +19,7 @@ export default function Signup(){
     createAccount()
   }
 
-  //handle Signup API Integration here
+  //handle PatientSignupForm API Integration here
   const createAccount=()=>{
 
   }
@@ -29,10 +29,10 @@ export default function Signup(){
         <div className="">
         {
                 fields.map(field=>
-                    <>
+                    <div key={field.id}>
                         <h1 className="font-semibold">{field.labelText}</h1>
                         <Input
-                            key={field.id}
+
                             handleChange={handleChange}
                             value={signupState[field.id]}
                             labelText={field.labelText}
@@ -41,9 +41,9 @@ export default function Signup(){
                             name={field.name}
                             type={field.type}
                             isRequired={field.isRequired}
-                            placeholder={field.placeholder}
+                            placeholder={field.placeHolder}
                         />
-                    </>
+                    </div>
                 
                 )
             }
