@@ -4,7 +4,7 @@ function DesktopNav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav>
-      <div className="relative w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-between p-2 items-center h-16">
+      <div className=" text-[#757575] relative w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-between p-2 items-center h-16">
         <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
           {/* <MobileButton /> */}
           {/* Button start */}
@@ -51,7 +51,7 @@ function DesktopNav() {
           </button>
           {/* Button End */}
         </div>
-        <div className="flex-shrink-0 flex items-center">
+        <div className=" flex-shrink-0 flex items-center">
           {/* <img
             className="block lg:hidden h-8 w-auto"
             src="logo.svg"
