@@ -5,6 +5,7 @@ import {Patient} from "../entity/patient";
 const sampleReqBody = {
     first_name: "Asif",
     last_name: "Joardar",
+    password:"bycrypt",
     blood_group: "A+",
     gender: "Male",
     date_of_birth: "01-01-1971",
@@ -65,6 +66,15 @@ const createPatientValidation = [
         .normalizeEmail()
         .isEmail()
         .custom(checkUnique(User, 'email', 'Email Address')),
+
+    check('password').isStrongPassword({
+        minLength: 8,
+        minLowercase: 1,
+        minUppercase: 1,
+        minNumbers: 1
+    }).withMessage("Password must be greater than 8 and contain at least one uppercase letter, one lowercase letter, and one number"),
+
+
     check('contact_number')
         .notEmpty()
         .isLength({min: 11, max:11})
