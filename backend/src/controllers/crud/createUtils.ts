@@ -5,22 +5,26 @@ import {PatientMedicalCondition} from "../../entity/patient-medical-condition";
 import {Doctor} from "../../entity/doctor";
 import {DoctorSpecialization} from "../../entity/doctor-specialization";
 import {DoctorAvailability} from "../../entity/doctor-availability";
-
 const _ = require("lodash");
-
-const createUser = req => User.create(_.pick(req.body, [
-    "first_name",
-    "last_name",
-    "blood_group",
-    "gender",
-    "date_of_birth",
-    "email",
-    "contact_number",
-    "emergency_contact_number",
-    "address",
-    "official_id_type",
-    "official_id_number"
-]));
+import * as bcrypt from 'bcrypt';
+const createUser = req => {
+    return User.create({
+        ..._.pick(req.body, [
+            "first_name",
+            "last_name",
+            "blood_group",
+            "gender",
+            "date_of_birth",
+            "email",
+            "contact_number",
+            "emergency_contact_number",
+            "address",
+            "official_id_type",
+            "official_id_number"
+        ]),
+        password: bcrypt.hashSync(req.body.password, 10)
+    });
+};
 
 const createPatient = (req,userObj) => Patient.create({
     profession: req.body.profession,
