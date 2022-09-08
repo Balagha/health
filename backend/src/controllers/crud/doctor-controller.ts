@@ -2,9 +2,8 @@ import {Doctor} from "../../entity/doctor";
 import {DoctorSpecialization} from "../../entity/doctor-specialization"
 import {DoctorAvailability} from "../../entity/doctor-availability"
 import {User} from "../../entity/user";
-import {createUser, createDoctor, createSpecialization, createAvailability} from "./createUtils";
-import {updateUserEntity, updateDoctorAvailabilityEntity, updateDoctorForeignKeys} from "./updateUtils";
-
+import {createAvailability, createDoctor, createSpecialization, createUser} from "./createUtils";
+import {updateDoctorAvailabilityEntity, updateDoctorForeignKeys, updateUserEntity} from "./updateUtils";
 
 const relations = ["user", "doctor_availability", "doctor_specialization"];
 
