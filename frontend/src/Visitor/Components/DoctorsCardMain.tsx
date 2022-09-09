@@ -15,7 +15,12 @@ function DoctorsCardMain() {
     // https://raw.githubusercontent.com/asifjoardar/health/master/misc/dr-list.json #Our Data
     // http://universities.hipolabs.com/search?country=United+States #Dummmy api
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/asifjoardar/health/master/misc/dr-list.json')
+/*        const requestOptions = {
+            method: 'GET',
+            credentials:'same-origin',
+
+        }*/
+        fetch('http://localhost:8081/api/doctor/',{method:'GET',credentials: 'include'})
             .then((res) => res.json())
             .then((result) => {
                 setItems(result)
@@ -24,7 +29,7 @@ function DoctorsCardMain() {
 
     const [searchParam] = useState(["name", "title"]);
 
-    function cardSearch(items: any) {
+/*    function cardSearch(items: any) {
         return items.filter((item: any) => {
             return searchParam.some((newItem) => {
                 return (
@@ -37,38 +42,33 @@ function DoctorsCardMain() {
         });
     }
 
-    const found = cardSearch(items);
+    const found = cardSearch(items);*/
     return (
         <>
             <Topbar/>
             <Navbar/>
             <SearchDoctor/>
-            {found.length === 0 ?
+            {items.length === 0 ?
                 <>
                     <div className="flex items-center justify-center ">
-                        <div
-                            className="w-40 h-40 border-t-4 border-b-4 border-green-900 rounded-full animate-spin"></div>
+                        <div className="w-40 h-40 border-t-4 border-b-4 border-green-900 rounded-full animate-spin"></div>
                     </div>
                 </> :
                 <div className="flex flex-row flex-wrap mt-1 mb-2 justify-center">
-                    {found.map((item:any ,index:any) => (
-                        <div key={index}
-                             className="m-1 w-full max-w-sm bg-white rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700">
+                    {items.map((item:any ,index:any) => (
+                        <div key={item.id} className="m-1 w-full max-w-sm bg-white rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700">
                             <div className="flex flex-row items-center justify-center">
                                 <div className="flex flex-col w-[50%]">
-                                    <img className="p-8 w-80 h-40 rounded-full" src="/images/doctor.png"
-                                         alt="doctor image"/>
-                                </div>
+                                    <img className="p-8 w-80 h-40 rounded-full" src="/images/doctor.png" alt="doctor image"/></div>
                                 <div className="flex flex-col p-2 w-[50%]">
-                                    <h2 className="text-left break-words">{item.title}</h2>
-                                </div>
+                                    <h2 className="text-left break-words">{item.doctor_specialization.specialization}</h2></div>
                             </div>
                             <div className="flex flex-row">
                                 <div className="flex flex-col px-3 pb-2 w-[50%]">
                                     <div className="flex flex-row">
                                         <div>
                                             <a href="src/Visitor/Components/doctorsCardMain#">
-                                                <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white break-words">{item["name"]}</h5>
+                                                <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white break-words">{item.user.first_name + ' '+item.user.last_name} </h5>
                                             </a>
                                             <DoctorsRating/>
                                         </div>
@@ -81,7 +81,7 @@ function DoctorsCardMain() {
                                     </div>
                                 </div>
                                 <div className="flex p-2 flex-col w-[50%]">
-                                    <h2 className="text-left">{item.work_place}</h2>
+                                    <h2 className="text-left">{item.user.contact_number}</h2>
                                 </div>
                             </div>
                         </div>
