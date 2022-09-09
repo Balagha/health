@@ -28,7 +28,12 @@ export default function PatientSignupForm(){
       };
       fetch('http://localhost:8080/api/patient', requestOptions)
           .then(response => response.json())
-          .then(data => console.log(data));
+          .then(data =>
+          {
+              let alertmsg
+              data.errors.forEach(error=>alertmsg+=error.msg)
+              alert(alertmsg)
+          });
   }
 
   return(

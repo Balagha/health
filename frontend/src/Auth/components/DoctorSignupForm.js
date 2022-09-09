@@ -21,9 +21,14 @@ const DoctorSignupFor = ()=> {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(signupState)
         };
-        fetch('http://localhost:8080/api/doctor', requestOptions)
+        fetch('http://localhost:8081/api/doctor', requestOptions)
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data =>
+            {
+                let alertmsg
+                data.errors.forEach(error=>alertmsg+=error.msg)
+                alert(alertmsg)
+            });
     }
     return(
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
