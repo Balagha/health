@@ -33,13 +33,33 @@ const signupFields=[
         placeholder:"Username"   
     },
     {
+        labelText:"Date Of Birth",
+        labelFor:"date-of-birth",
+        id:"dob",
+        name:"dob",
+        type:"date",
+        autoComplete:"dateofbirth",
+        isRequired:true,
+        placeholder:"Date of Birth"
+    },
+    {
+        labelText:"Phone Number",
+        labelFor:"phone-number",
+        id:"phone",
+        name:"phone",
+        type:"text",
+        autoComplete:"phone",
+        isRequired:true,
+        placeholder:"Phone Number"
+    },
+    {
         labelText:"Email address",
         labelFor:"email-address",
         id:"email-address",
         name:"email",
         type:"email",
         autoComplete:"email",
-        isRequired:true,
+        isRequired:false,
         placeholder:"Email address"   
     },
     {
