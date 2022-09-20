@@ -36,6 +36,7 @@ function Table() {
         <div className="container body">
           <div className="main_container">
             <DashBoardFullSidebar/>
+
             <TopNavigator/>
 
             {/* <!-- page content --> */}
@@ -83,7 +84,7 @@ function Table() {
                           </li>
                           <li className="dropdown">
                             <a
-                              href="#"
+                              href="/#"
                               className="dropdown-toggle"
                               data-toggle="dropdown"
                               role="button"
@@ -95,10 +96,10 @@ function Table() {
                               className="dropdown-menu"
                               aria-labelledby="dropdownMenuButton"
                             >
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="/#">
                                 Settings 1
                               </a>
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="/#">
                                 Settings 2
                               </a>
                             </div>
@@ -160,7 +161,7 @@ function Table() {
                           </li>
                           <li className="dropdown">
                             <a
-                              href="#"
+                              href="/#"
                               className="dropdown-toggle"
                               data-toggle="dropdown"
                               role="button"
@@ -239,7 +240,7 @@ function Table() {
                           </li>
                           <li className="dropdown">
                             <a
-                              href="#"
+                              href="/#"
                               className="dropdown-toggle"
                               data-toggle="dropdown"
                               role="button"
@@ -251,10 +252,10 @@ function Table() {
                               className="dropdown-menu"
                               aria-labelledby="dropdownMenuButton"
                             >
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="/#">
                                 Settings 1
                               </a>
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="/#">
                                 Settings 2
                               </a>
                             </div>
@@ -482,7 +483,7 @@ function Table() {
                                 <td className=" ">Paid</td>
                                 <td className="a-right a-right ">$7.45</td>
                                 <td className=" last">
-                                  <a href="#">View</a>
+                                  <a href="/">View</a>
                                 </td>
                               </tr>
                               <tr className="odd pointer">
@@ -503,7 +504,7 @@ function Table() {
                                 <td className=" ">Paid</td>
                                 <td className="a-right a-right ">$741.20</td>
                                 <td className=" last">
-                                  <a href="#">View</a>
+                                  <a href="/">View</a>
                                 </td>
                               </tr>
                               <tr className="even pointer">
@@ -524,7 +525,7 @@ function Table() {
                                 <td className=" ">Paid</td>
                                 <td className="a-right a-right ">$432.26</td>
                                 <td className=" last">
-                                  <a href="#">View</a>
+                                  <a href="/">View</a>
                                 </td>
                               </tr>
                               <tr className="odd pointer">
@@ -542,7 +543,7 @@ function Table() {
                                 <td className=" ">Paid</td>
                                 <td className="a-right a-right ">$333.21</td>
                                 <td className=" last">
-                                  <a href="#">View</a>
+                                  <a href="/">View</a>
                                 </td>
                               </tr>
                               <tr className="even pointer">
@@ -560,7 +561,7 @@ function Table() {
                                 <td className=" ">Paid</td>
                                 <td className="a-right a-right ">$7.45</td>
                                 <td className=" last">
-                                  <a href="#">View</a>
+                                  <a href="/">View</a>
                                 </td>
                               </tr>
                               <tr className="odd pointer">
@@ -581,7 +582,7 @@ function Table() {
                                 <td className=" ">Paid</td>
                                 <td className="a-right a-right ">$741.20</td>
                                 <td className=" last">
-                                  <a href="#">View</a>
+                                  <a href="/">View</a>
                                 </td>
                               </tr>
                               <tr className="even pointer">
@@ -599,7 +600,7 @@ function Table() {
                                 <td className=" ">Paid</td>
                                 <td className="a-right a-right ">$432.26</td>
                                 <td className=" last">
-                                  <a href="#">View</a>
+                                  <a href="/">View</a>
                                 </td>
                               </tr>
                               <tr className="odd pointer">
@@ -654,7 +655,7 @@ function Table() {
                                 <td className=" ">Paid</td>
                                 <td className="a-right a-right ">$741.20</td>
                                 <td className=" last">
-                                  <a href="#">View</a>
+                                  <a href="/">View</a>
                                 </td>
                               </tr>
                             </tbody>

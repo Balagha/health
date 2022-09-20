@@ -1,11 +1,7 @@
 import React from 'react';
 import TopTiles from "./topTiles";
-import DashboardSideBar from "./dashboardSideBar";
-import DashBoardMenuFooter from "./dashBoardMenuFooter";
 import TopNavigator from "./dashBoardTopNavigator";
 import {Helmet} from "react-helmet";
-import VisitorLocation from "./visitorLocations";
-import TodoList from "./todoList";
 import Footer from "./footer";
 import DashBoardFullSidebar from './dashBoardfullSidebar';
 
