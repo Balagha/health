@@ -91,7 +91,7 @@ function DashboardSideBar(){
                 </ul>
               </li>
               <li>
-                <a href="/dashBoard/Components">
+                <a href="/Dashboard/Components/table">
                   <i className="fa fa-table"></i> Tables{" "}
                   {/* <span className="fa fa-chevron-down"></span> */}
                 </a>
