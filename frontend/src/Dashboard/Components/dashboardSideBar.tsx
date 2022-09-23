@@ -30,7 +30,7 @@ function DashboardSideBar(){
                 </ul>
               </li>
               <li>
-                <a>
+              <a href="/form">
                   <i className="fa fa-edit"></i> Forms{" "}
                   <span className="fa fa-chevron-down"></span>
                 </a>
