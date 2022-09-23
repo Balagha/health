@@ -33,6 +33,7 @@ export class Doctor extends BaseEntity{
     @JoinColumn()
     appointment: Appointment[]
 
-
+    @Column({ default: () => false ,select: false})
+    is_approved:boolean
 
 }

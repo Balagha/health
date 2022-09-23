@@ -22,6 +22,20 @@ export default function Login(){
 
     //Handle Login API Integration here
     const authenticateUser = () =>{
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify(loginState)
+        };
+        fetch('http://localhost:8081/auth/login/patient', requestOptions)
+            .then(response => response.json())
+            .then(data =>
+            {
+               // document.cookie=data.
+                console.log(data)
+                alert(data.message)
+            });
 
     }
 
@@ -40,7 +54,7 @@ export default function Login(){
                             name={field.name}
                             type={field.type}
                             isRequired={field.isRequired}
-                            placeholder={field.placeholder}
+                            placeholder={field.placeHolder}
                     />
                 
                 )

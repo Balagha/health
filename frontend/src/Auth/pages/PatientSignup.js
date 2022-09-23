@@ -1,9 +1,9 @@
 import Header from "../components/Header";
-import Signup from "../components/Signup";
+import PatientSignupForm from "../components/PatientSignupForm";
 
-export default function SignupPage(){
+export default function PatientSignupPage(){
     return(
-        <div className="h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="h-full  flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
              <div className="max-w-md w-full space-y-8">
             <Header
               heading="Signup to create an account"
@@ -12,9 +12,9 @@ export default function SignupPage(){
               linkUrl="/auth/login"
             />
              <div className='flex items-center justify-center'>
-                 <a href="#" className="text-[#A5C422] font-sans">SignUp as Doctor?</a>
+                 <a href="/auth/signup/doctor" className="text-[#A5C422] font-sans">SignUp as Doctor?</a>
              </div>
-            <Signup/>
+            <PatientSignupForm/>
 
             </div>
         </div>

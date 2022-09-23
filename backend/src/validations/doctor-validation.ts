@@ -55,6 +55,13 @@ const createDoctorValidation = [
         .normalizeEmail()
         .isEmail()
         .custom(checkUnique(User, 'email', 'Email Address')),
+    check('password').notEmpty().isStrongPassword({
+        minLength: 8,
+        minLowercase: 1,
+        minUppercase: 1,
+        minNumbers: 1
+    }).withMessage("Password must be greater than 8 and contain at least one uppercase letter, one lowercase letter, and one number"),
+
     check('contact_number')
         .isLength({min: 11, max:11})
         .matches(/^\d+$/).withMessage('Contact number can not contain character.')
