@@ -4,6 +4,7 @@ import * as BodyParser from "body-parser"
 import router from "./routes/routers";
 const cors = require('cors')
 const app =express();
+const cookieParser = require('cookie-parser');
 
 /*
 app.use(BodyParser.json());
@@ -16,7 +17,7 @@ app.listen(8080, () => console.log("app is listen at port 8080"));
 
 AppDataSource.initialize().then(async () => {
     app.use(BodyParser.json());
-    //app.use(cors());
+    app.use(cookieParser());
     const corsConfig = {
         credentials: true,
         origin: true,
