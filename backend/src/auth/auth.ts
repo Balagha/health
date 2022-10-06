@@ -34,6 +34,11 @@ const generateJwtToken = async (req,res)=> {
             secure: process.env.NODE_ENV === "production",
         })
         .status(200)
+        .cookie("user", user.id, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+        })
+        .status(200)
         .json({ message: "Logged in successfully 😊 👌" });
 }
 
