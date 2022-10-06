@@ -16,11 +16,16 @@ app.listen(8080, () => console.log("app is listen at port 8080"));
 
 AppDataSource.initialize().then(async () => {
     app.use(BodyParser.json());
-    app.use(cors());
+    //app.use(cors());
+    const corsConfig = {
+        credentials: true,
+        origin: true,
+    };
+    app.use(cors(corsConfig));
     app.use('/api', router);
     app.use('/auth',router);
     /*app.get('/', (req, res) => {
 	  res.send('Hello World!')
 	})*/
-    app.listen(8080, () => console.log("app is listen at port 8080"));
+    app.listen(8081, () => console.log("app is listen at port 8081"));
 }).catch(console.log)
