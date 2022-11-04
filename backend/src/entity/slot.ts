@@ -13,6 +13,9 @@ export class Slot extends BaseEntity{
     @Column({ type: 'time' })
     end_time: string;
 
+    @Column()
+    day_name: string;
+
     @ManyToOne(() => Doctor, doctor => doctor.slot)
     @JoinColumn()
     doctor: Doctor;

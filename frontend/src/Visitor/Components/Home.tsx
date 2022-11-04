@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Doctors from "./Doctors";
 import Topbar from "./Topbar";
 import LatestNews from "./LatestNews";
-import Appointment from "./Appointment";
 import Showmap from "./Showmap";
 import Footer from "./footer";
 
@@ -17,7 +16,6 @@ function Home() {
       <About />
       <Doctors />
       <LatestNews />
-      <Appointment />
       <Showmap />
       <Footer />
     </div>

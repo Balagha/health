@@ -2,6 +2,7 @@ import {Doctor} from "./doctor";
 import {BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
 import {Slot} from "./slot";
 import {Patient} from "./patient";
+import {User} from "./user";
 
 @Entity('appointment')
 export class Appointment extends BaseEntity{
@@ -13,7 +14,7 @@ export class Appointment extends BaseEntity{
     @JoinColumn()
     doctor: Doctor;
 
-    @ManyToOne(() => Patient, patient => patient.id)
+    @ManyToOne(() => User, (user_info) => user_info.id)
     @JoinColumn()
     patient: Patient;
 

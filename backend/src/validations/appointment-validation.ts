@@ -5,13 +5,7 @@ import {Doctor} from "../entity/doctor";
 import {Patient} from "../entity/patient";
 
 const isValidInput = [
-
-    param('patientId').exists().toInt().custom(patientId =>
-        Patient.findOne({where:{id:patientId}})
-            .then(id => !id && Promise.reject('Patient Not Found'))
-    ),
-
-
+    
     param('doctorId').exists().toInt().custom(doctorId =>
         Doctor.findOne({where:{id:doctorId}})
             .then(id => !id && Promise.reject('Doctor Not Found'))
